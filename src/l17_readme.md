@@ -1,4 +1,4 @@
-##Types in JavaScript
+## Types in JavaScript
 ```
 typeof null        // "object" (не "null" по историческим причинам)
 typeof undefined   // "undefined"
@@ -24,4 +24,4 @@ String(true);     // 'true'
 String(false);    // 'false'
 
 String('44843');  // '44843'
-```s
+```
