@@ -20,10 +20,30 @@ distance - функция, вычисляющая расстояние межд�
 distance(makePoint(-2, -3), makePoint(-4, 4)); // ≈ 7.28
 */
 
-const quadrant = () => {
-
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
 }
 
-const symmetricalPoint = () => {
+const p = new Point(4.45, 5.54);
+const p2 = new Point(-4.45, 5.54);
+const p3 = new Point(-4.45, -5.54);
+const p4 = new Point(4.45, -5.54);
 
-}
+console.log(p);
+
+const xAxis = point => point.x;
+const yAxis = point => point.y;
+
+console.log(xAxis(p));
+console.log(yAxis(p));
+
+const quadrant = (point) => {
+  if (xAxis(point) > 0 && yAxis(point) > 0) {
+    return 'Q1';
+  }
+};
+console.log(quadrant(p));
+//
+// const symmetricalPoint = () => {
+// }
