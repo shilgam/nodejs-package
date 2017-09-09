@@ -1,4 +1,4 @@
-import { makePoint, xAxis, yAxis } from './l2_base';
+import { makePoint, getX, getY } from './l2_base';
 /*
 Реализуйте и экспортируйте следующие функции для работы с точками:
 
@@ -26,14 +26,14 @@ d = sqrt((x2−x1)^2+(y2−y1)^2)
 distance(makePoint(-2, -3), makePoint(-4, 4)); // ≈ 7.28
 */
 
-const quadrant = (point) => {
-  if (xAxis(point) > 0 && yAxis(point) > 0) {
+export const quadrant = (point) => {
+  if (getX(point) > 0 && getY(point) > 0) {
     return 'Q1';
-  } if (xAxis(point) < 0 && yAxis(point) > 0) {
+  } if (getX(point) < 0 && getY(point) > 0) {
     return 'Q2';
-  } if (xAxis(point) < 0 && yAxis(point) < 0) {
+  } if (getX(point) < 0 && getY(point) < 0) {
     return 'Q3';
-  } if (xAxis(point) > 0 && yAxis(point) < 0) {
+  } if (getX(point) > 0 && getY(point) < 0) {
     return 'Q4';
   }
   return 'null';
@@ -45,12 +45,12 @@ const quadrant = (point) => {
 // console.log(quadrant(makePoint(4, -5))); // Q4
 // console.log(quadrant(makePoint(0, 0))); // Q4
 
-const symmetricalPoint = point => makePoint(-xAxis(point), -yAxis(point));
+export const symmetricalPoint = point => makePoint(-getX(point), -getY(point));
 // console.log(symmetricalPoint(makePoint(4, 1)));
 
-const distance = (point1, point2) => {
-  const deltaX = xAxis(point2) - xAxis(point1);
-  const deltaY = yAxis(point2) - yAxis(point1);
+export const distance = (point1, point2) => {
+  const deltaX = getX(point2) - getX(point1);
+  const deltaY = getY(point2) - getY(point1);
   return Math.sqrt((deltaX ** 2) + (deltaY ** 2));
 };
 
