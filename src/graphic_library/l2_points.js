@@ -27,16 +27,18 @@ distance(makePoint(-2, -3), makePoint(-4, 4)); // ≈ 7.28
 */
 
 export const quadrant = (point) => {
-  if (getX(point) > 0 && getY(point) > 0) {
-    return 'Q1';
-  } if (getX(point) < 0 && getY(point) > 0) {
-    return 'Q2';
-  } if (getX(point) < 0 && getY(point) < 0) {
-    return 'Q3';
-  } if (getX(point) > 0 && getY(point) < 0) {
-    return 'Q4';
+  const X = getX(point);
+  const Y = getY(point);
+  if (X > 0 && Y > 0) {
+    return 1;
+  } if (X < 0 && Y > 0) {
+    return 2;
+  } if (X < 0 && Y < 0) {
+    return 3;
+  } if (X > 0 && Y < 0) {
+    return 4;
   }
-  return 'null';
+  return null;
 };
 //
 // console.log(quadrant(makePoint(4, 5))); // Q1
