@@ -55,5 +55,4 @@ export const distance = (point1, point2) => {
   const deltaY = getY(point2) - getY(point1);
   return Math.sqrt((deltaX ** 2) + (deltaY ** 2));
 };
-
-console.log(distance(makePoint(-10, -10), makePoint(0, 0)));
+// console.log(distance(makePoint(-10, -10), makePoint(0, 0)));
