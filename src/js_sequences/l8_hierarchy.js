@@ -42,41 +42,21 @@ const dom = append(dom10, node('p', 'is about logic'));
 // console.log(`>>>>>   children(dom3):  ${htmlToString(children(dom3))}`); // dom2
 // console.log(`>> children(children1):  ${htmlToString(children(children1))}`); // tail(list)
 
-const select = (tagName, dom) => {
-  const emptyList = make();
+const select = (tagName, html) => reduce((element, acc) => {
+  const acc2 = hasChildren(element) ? concat(select(tagName, children(element)), acc) : acc;
+  return is(tagName, element) ? consList(element, acc2) : acc2;
+}, make(), html);
 
-  const iter = (accumList, dom) => {
-    const childBranch = () => {
-      if (!hasChildren(dom)) {
-        return emptyList;
-      } return iter(emptyList, children(dom));
-    };
-
-    const NodeBranch = () => {
-      const nodeEl = head(dom);
-      if (!hasChildren(nodeEl)) {
-        return l(nodeEl);
-      }
-      const childList = iter(emptyList, children(nodeEl));
-      return append(childList, nodeEl);
-    };
-
-    return concat(childBranch(), NodeBranch());
-  };
-  const allNodes = iter(emptyList, dom);
-  const filtered = filter(elem => is(tagName, elem), allNodes);
-  return filtered;
-};
 export default select;
 
-let testList = select('span', dom);
-console.log(`>>>>>   select:  ${htmlToString(testList)}   >>> length: ${length(testList)}`); // .toBe(1)
-testList = select('section', dom);
-console.log(`>>>>>   select:  ${htmlToString(testList)}   >>> length: ${length(testList)}`); // .toBe(0);
-testList = select('li', dom);
-console.log(`>>>>>   select:  ${htmlToString(testList)}   >>> length: ${length(testList)}`); // .toBe(5);
-testList = select('p', dom);
-console.log(`>>>>>   select:  ${htmlToString(testList)}   >>> length: ${length(testList)}`); // .toBe(5);
-testList = select('h1', dom);
-console.log(`>>>>>   select:  ${htmlToString(testList)}   >>> length: ${length(testList)}`); // .toBe(2);
+// let myList = select('span', dom);
+// console.log(`>>>>>   select:  ${htmlToString(myList)}   >>> length: ${length(myList)}`); // .toBe(1)
+// myList = select('section', dom);
+// console.log(`>>>>>   select:  ${htmlToString(myList)}   >>> length: ${length(myList)}`); // .toBe(0);
+// myList = select('li', dom);
+// console.log(`>>>>>   select:  ${htmlToString(myList)}   >>> length: ${length(myList)}`); // .toBe(5);
+// myList = select('p', dom);
+// console.log(`>>>>>   select:  ${htmlToString(myList)}   >>> length: ${length(myList)}`); // .toBe(5);
+// myList = select('h1', dom);
+// console.log(`>>>>>   select:  ${htmlToString(myList)}   >>> length: ${length(myList)}`); // .toBe(2);
 // END
