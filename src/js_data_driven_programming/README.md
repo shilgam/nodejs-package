@@ -10,7 +10,16 @@ https://ru.hexlet.io/courses/ddp
 
 Также мы перейдем к разработке через тесты (test driven development).
 
-
 RUNNING TESTS:
 * `npm test` -- to run all tests
 * `npm test __tests__/...` -- to run specific test(s)
+
+RUNNING JS FILES:
+* `npm run babel-node src/...`
+
+
+PACKAGES DOCUMENTATION:
+* [hexlet-html-tags](https://github.com/hexlet-components/js-html-tags/tree/master/docs)
+* [hexlet-pairs](https://github.com/hexlet-components/js-pairs/tree/master/docs)
+* [hexlet-pairs-data ](https://github.com/hexlet-components/js-pairs-data/tree/master/docs)
+* [hexlet-points](https://github.com/hexlet-components/js-points/tree/master/docs)
