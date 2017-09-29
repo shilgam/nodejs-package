@@ -7,7 +7,7 @@
     "hexlet": "dist/bin/hexlet.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --colors",
     "babel-node": "babel-node",
     "flow": "flow",
     "flow-typed": "flow-typed",
