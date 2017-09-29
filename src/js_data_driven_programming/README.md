@@ -9,3 +9,8 @@ https://ru.hexlet.io/courses/ddp
 * Объектно-ориентированное программирование
 
 Также мы перейдем к разработке через тесты (test driven development).
+
+
+RUNNING TESTS:
+* `npm test` -- to run all tests
+* `npm test __tests__/...` -- to run specific test(s)

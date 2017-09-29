@@ -7,7 +7,7 @@
     "hexlet": "dist/bin/hexlet.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --colors",
     "babel-node": "babel-node",
     "flow": "flow",
     "flow-typed": "flow-typed",
@@ -28,10 +28,11 @@
   "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
   "dependencies": {
     "gulp": "*",
-    "hexlet-points": "*",
+    "jest-cli": "^21.2.1",
+    "hexlet-html-tags": "*",
     "hexlet-pairs": "*",
     "hexlet-pairs-data": "*",
-    "hexlet-html-tags": "*"
+    "hexlet-points": "*"
   },
   "devDependencies": {
     "babel-cli": "*",
