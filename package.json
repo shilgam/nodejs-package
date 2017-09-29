@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
   "dependencies": {
-    "gulp": "*"
+    "gulp": "*",
+    "jest-cli": "^21.2.1"
   },
   "devDependencies": {
     "babel-cli": "*",
