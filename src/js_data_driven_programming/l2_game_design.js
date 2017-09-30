@@ -23,29 +23,22 @@ const run = (player1, player2, cards) => {
   const iter = (health1, name1, health2, name2, order, log) => {
     // BEGIN (write your solution here)
     const currentCard = random(cards);
-    // console.log(`>>>>>>>    currentCard: ${pairToString(currentCard)}`);
     const activePlayer = (order === 1) ? player1 : player2;
     const passivePlayer = (order === 1) ? player2 : player1;
     const previousPassivePlayer = (order === 1) ? player1 : player2;
     const health = (plrName) => { return (plrName === player1) ? health1 : health2; };
     const cardName = car(currentCard);
-    // console.log(`>>>>>>>    cardName: ${cardName}`);
     const nextOrder = (order === 1) ? 2 : 1;
     const damageFunc = hlth => cdr(currentCard)(hlth);
     const damage = damageFunc(health(passivePlayer));
-    // console.log(`>>>>   damage: ${damage}`);
     const newHealth = (plrName) => {
       return (plrName === activePlayer) ? health(plrName) : (health(plrName) - damage);
     };
-    // console.log(`>>>>>>>    newHealth(activePlayer): ${newHealth(activePlayer)}`);
-    // console.log(`>>>>>>>    newHealth(passivePlayer): ${newHealth(passivePlayer)}`);
     const message = [
       `Игрок '${activePlayer}' применил '${cardName}' против `,
       `'${passivePlayer}' и нанес урон '${damage}'`,
     ].join('');
-    // console.log(`>>>>>>>    message: ${message}`);
     const newLog = consList(cons(cons(newHealth(player1), newHealth(player2)), message), log);
-    // console.log(`>>>>>>>    newLog: ${listToString(newLog)}`);
 
     if (health(previousPassivePlayer) <= 0) {
       const endMessage = `Игрок '${previousPassivePlayer}' убит. Игра окончена.`;
@@ -69,8 +62,8 @@ const cards = l(
 );
 
 const gameLog = run('John', 'Ada', cards);
-console.log(`>>>>   get0: ${pairToString(get(0, gameLog))}`);
-console.log(`>>>>   get1: ${pairToString(get(1, gameLog))}`);
-console.log(`>>>>   get2: ${pairToString(get(2, gameLog))}`);
-console.log(`>>>>   get3: ${pairToString(get(3, gameLog))}`);
-console.log(`>>>>   get4: ${pairToString(get(4, gameLog))}`);
+// console.log(`>>>>   get0: ${pairToString(get(0, gameLog))}`);
+// console.log(`>>>>   get1: ${pairToString(get(1, gameLog))}`);
+// console.log(`>>>>   get2: ${pairToString(get(2, gameLog))}`);
+// console.log(`>>>>   get3: ${pairToString(get(3, gameLog))}`);
+// console.log(`>>>>   get4: ${pairToString(get(4, gameLog))}`);
