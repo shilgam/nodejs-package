@@ -1,5 +1,5 @@
 import { cons, car, cdr, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
-import { attach, contents } from './type'; // eslint-disable-line
+import { attach, contents } from './l4_type'; // eslint-disable-line
 
 export const make = (name, percent) =>
   attach('PercentCard', cons(name, percent));
