@@ -6,6 +6,8 @@ let methods = l();
 
 export const getMethod = (obj, methodName) => {
   // BEGIN (write your solution here)
+  // Реализуйте функцию getMethod, которая производит поиск конкретной реализации
+  // функции для переданного типа.
 
   // END
 };

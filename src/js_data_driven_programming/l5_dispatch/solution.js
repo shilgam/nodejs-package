@@ -1,6 +1,11 @@
+import { cons as consList, l, random, head, reverse, toString as listToString,
+length, get } from 'hexlet-pairs-data'; // eslint-disable-line
 import { cons, car, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
-import { cons as consList, l, random, head, reverse, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
-import { getName, damage } from './card';
+// import { getName, damage } from './card';
+
+import { getName as getSimpleCardName, damage as simpleCardDamage, make as makeSimpleCard } from './simpleCard'; // eslint-disable-line
+import { getName as getPercentCardName, damage as percentCardDamage, make as makePercentCard } from './percentCard'; // eslint-disable-line
+import { typeTag } from './type'; // eslint-disable-line
 
 /*  >>>>>  EX  <<<<<
         card.js
@@ -21,18 +26,40 @@ import { getName, damage } from './card';
     которой подробно описан в текстовой части этого урока.
 */
 
+
+const isSimpleCard = card => typeTag(card) === 'SimpleCard';
+
 const run = (player1, player2, cards, customRandom) => {
   const iter = (health1, name1, health2, name2, order, log) => {
     if (health1 <= 0) {
       return consList(cons(car(head(log)), `${name1} был убит`), log);
     }
-    const card = customRandom(cards);
-    const cardName = getName(card);
-    const points = damage(card, health2);
-    const newHealth = health2 - points;
 
-    const message = `Игрок '${name1}' применил '${cardName}'
-      против '${name2}' и нанес урон '${points}'`;
+    const getCardName = (card) => {
+      if (isSimpleCard(card)) {
+        return getSimpleCardName(card);
+      } return getPercentCardName(card);
+    };
+
+    const getDamage = (card, health) => {
+      if (isSimpleCard(card)) {
+        return simpleCardDamage(card, health);
+      } return percentCardDamage(card, health);
+    };
+
+    const card = customRandom(cards);
+    // const cardName = getName(card);
+    // const points = damage(card, health2);
+    // const newHealth = health2 - points;
+    const cardName = getCardName(card);
+    const damage = getDamage(card, health2);
+    const newHealth = health2 - damage;
+
+    const message = [
+      `Игрок '${name1}' применил '${cardName}' против `,
+      `'${name2}' и нанес урон '${damage}'`,
+    ].join('');
+
     let stats;
     if (order === 1) {
       stats = cons(cons(health1, newHealth), message);
@@ -48,6 +75,34 @@ const run = (player1, player2, cards, customRandom) => {
   return reverse(iter(startHealth, player1, startHealth, player2, 1, l(logItem)));
 };
 
-export default (cards, customRandom = random) =>
-  (name1, name2) =>
-    run(name1, name2, cards, customRandom);
+// export default (cards, customRandom = random) =>
+//   (name1, name2) =>
+//     run(name1, name2, cards, customRandom);
+
+const make = (cards, customRandom = random) =>
+  (player1, player2) => run(player1, player2, cards, customRandom);
+export default make;
+
+// Testing
+const cards = l(
+  makeSimpleCard('Костяная кочерга гробницы', 7),
+  makePercentCard('Памятный металл палача', 80),
+);
+
+let cardIndex = 2;
+const pseudoRandomFunc = (cardsPack) => {
+  cardIndex = cardIndex === 0 ? 1 : 0;
+  return get(cardIndex, cardsPack);
+};
+
+// // Rinning game with random function OR for testing:
+const game = make(cards, pseudoRandomFunc); // random
+
+const gameLog = game('John', 'Ada');
+
+console.log(`>>>>   Number of steps:  ${length(gameLog)}`);
+console.log(`>>>>   get0: ${pairToString(get(0, gameLog))}`); // .toBe('(10, 10)')
+console.log(`>>>>   get1: ${pairToString(get(1, gameLog))}`); // .toBe('(10, 3)')
+console.log(`>>>>   get2: ${pairToString(get(2, gameLog))}`); // .toBe('(2, 3)')
+console.log(`>>>>   get3: ${pairToString(get(3, gameLog))}`); // .toBe('(2, -4)')
+console.log(`>>>>   get4: ${pairToString(get(4, gameLog))}`); // .toBe('(2, -4)')

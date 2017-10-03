@@ -5,5 +5,6 @@ export const getName = self =>
   getMethod(self, 'getName')(contents(self));
 
 // BEGIN (write your solution here)
+// Реализуйте и экспортируйте обобщенную функцию damage.
 
 // END
