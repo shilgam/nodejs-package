@@ -3,22 +3,13 @@ import { definer } from './generic'; // eslint-disable-line
 import { attach,
 contents } from './type'; // eslint-disable-line
 
-// const defmethod = definer('PercentCard');
-//
-// const make = (name, percent) =>
-//   attach('PercentCard', cons(name, percent));
-//
-// export default make;
-//
-// defmethod('getName', self => car(self));
-//
-// defmethod('damage', (self, health) =>
-//   Math.round(health * (cdr(self) / 100)));
+const defmethod = definer('PercentCard');
 
 export const make = (name, percent) =>
   attach('PercentCard', cons(name, percent));
+export default make;
 
-export const getName = self => car(contents(self));
+defmethod('getName', self => car(self));
 
-export const damage = (self, health) =>
-  Math.round(health * (cdr(contents(self)) / 100));
+defmethod('damage', (self, health) =>
+  Math.round(health * (cdr(self) / 100)));

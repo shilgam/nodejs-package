@@ -6,11 +6,14 @@ contents } from './type'; // eslint-disable-line
 // BEGIN (write your solution here)
 // Реализуйте интерфейс типа simpleCard.
 
-// END
+const defmethod = definer('SimpleCard');
 
 export const make = (name, damage) =>
   attach('SimpleCard', cons(name, damage));
+export default make;
 
-export const getName = self => car(contents(self));
+defmethod('getName', self => car(self));
 
-export const damage = (self, health) => cdr(contents(self));
+defmethod('damage', (self, health) => cdr(self));
+
+// END
