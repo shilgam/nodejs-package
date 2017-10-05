@@ -1,7 +1,13 @@
 const make = (name, percent) =>
-  ({
-    name,
-    damage: health => Math.round(health * (percent / 100)),
-  });
+  (message, health) => {
+    switch (message) {
+      case 'getName':
+        return name;
+      case 'damage':
+        return Math.round(health * (percent / 100));
+      default:
+        return 'undefined method';
+    }
+  };
 
 export default make;
