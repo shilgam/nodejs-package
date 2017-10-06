@@ -1,6 +1,6 @@
 import { cons as consList, l, random, head, reverse, toString as listToString , length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import simpleCard from './SimpleCard';
-import percentCard from './PercentCard';
+import SimpleCard from './SimpleCard';
+import PercentCard from './PercentCard';
 
 /*  >>>>>  EX  <<<<<
         simpleCard.js
@@ -60,8 +60,8 @@ export default make;
 
 // // Testing
 // const cards = l(
-//   simpleCard('Костяная кочерга гробницы', 7),
-//   percentCard('Памятный металл палача', 80),
+//   new SimpleCard('Костяная кочерга гробницы', 7),
+//   new PercentCard('Памятный металл палача', 80),
 // );
 //
 // let cardIndex = 2;
