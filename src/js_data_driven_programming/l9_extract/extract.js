@@ -38,19 +38,17 @@ import { make, getAttribute, getName } from './tags';
 
 // BEGIN (write your solution here)
 
-const getAttrName = (tag) => {
-  const attributes = tag.attributes;
-  return Object.keys(attributes)[0];
+const mapping = {
+  img: t => getAttribute('src', t),
+  a: t => getAttribute('href', t),
+  link: t => getAttribute('href', t),
+
 };
 
-const extract = (tags) => {
-  const getAttrBody = (tag) => {
-    const attrName = getAttrName(tag);
-    return getAttribute(attrName, tag);
-  };
-  return map(getAttrBody, tags);
-};
+const extract = tags => map(tag => mapping[getName(tag)](tag), tags);
 export default extract;
+
+// END
 
 // // Testing
 // const tags = l(
