@@ -1,4 +1,6 @@
-import { cons as consList, l, random, head, reverse, toString as listToString } from 'hexlet-pairs-data'; // eslint-disable-line
+import { cons as consList, l, random, head, reverse, toString as listToString , length, get } from 'hexlet-pairs-data'; // eslint-disable-line
+import simpleCard from './SimpleCard';
+import percentCard from './PercentCard';
 
 /*  >>>>>  EX  <<<<<
         simpleCard.js
@@ -20,9 +22,12 @@ const run = (player1, player2, cards, customRandom) => {
       return consList(newLog, log);
     }
     const card = customRandom(cards);
-    // BEGIN (write your solution here)
 
+    // BEGIN (write your solution here)
+    const cardName = card.name;
+    const points = card.damage(health2);
     // END
+
     const newHealth = health2 - points;
 
     const message = `Игрок '${name1}' применил '${cardName}'
@@ -48,6 +53,29 @@ const run = (player1, player2, cards, customRandom) => {
   return reverse(iter(startHealth, player1, startHealth, player2, 1, l(logItem)));
 };
 
-export default (cards, customRandom = random) =>
+const make = (cards, customRandom = random) =>
   (name1, name2) =>
     run(name1, name2, cards, customRandom);
+export default make;
+
+// // Testing
+// const cards = l(
+//   simpleCard('Костяная кочерга гробницы', 7),
+//   percentCard('Памятный металл палача', 80),
+// );
+//
+// let cardIndex = 2;
+// const pseudoRandomFunc = (cardsPack) => {
+//   cardIndex = cardIndex === 0 ? 1 : 0;
+//   return get(cardIndex, cardsPack);
+// };
+//
+// // Rinning game with random function OR for testing:
+// const game = make(cards, pseudoRandomFunc); // random
+// const gameLog = game('John', 'Ada'); // .toBe(5);
+// console.log(`>>>>   Number of steps:  ${length(gameLog)}`);
+// console.log(`>>>>   get0: ${listToString(get(0, gameLog))}`); // .toBe('(10, 10)')
+// console.log(`>>>>   get1: ${listToString(get(1, gameLog))}`); // .toBe('(10, 3)')
+// console.log(`>>>>   get2: ${listToString(get(2, gameLog))}`); // .toBe('(2, 3)')
+// console.log(`>>>>   get3: ${listToString(get(3, gameLog))}`); // .toBe('(2, -4)')
+// console.log(`>>>>   get4: ${listToString(get(4, gameLog))}`); // .toBe('(2, -4)')

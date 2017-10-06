@@ -1,10 +1,7 @@
-export default class PercentCard {
-  constructor(name, percent) {
-    this.name = name;
-    this.percent = percent;
-  }
+const make = (name, percent) =>
+  ({
+    name,
+    damage: health => Math.round(health * (percent / 100)),
+  });
 
-  damage(health) {
-    return Math.round(health * (this.percent / 100));
-  }
-}
+export default make;
