@@ -13,3 +13,17 @@
 документации:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 */
+
+const uniq = (array) => {
+  const callbackFunc = (accum, elem, index) => {
+    return (array.includes(elem, index + 1)) ? accum : accum.concat(elem);
+  };
+  return array.reverse().reduce(callbackFunc, []).reverse();
+};
+
+export default uniq;
+
+// // testing
+// const arr1 = [1, 2, 3, 2, 5, 5, 7];
+// const newArr = uniq(arr1);
+// console.log(newArr);
