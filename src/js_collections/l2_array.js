@@ -15,10 +15,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 */
 
 const uniq = (array) => {
-  const callbackFunc = (accum, elem, index) => {
-    return (array.includes(elem, index + 1)) ? accum : accum.concat(elem);
-  };
-  return array.reverse().reduce(callbackFunc, []).reverse();
+  const callbackFunc = (acc, elem) =>
+    acc.includes(elem) ? acc : acc.concat(elem);
+
+  return array.reduce(callbackFunc, []);
 };
 
 export default uniq;
