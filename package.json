@@ -27,12 +27,13 @@
   },
   "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "gulp": "*",
-    "jest-cli": "^21.2.1",
     "hexlet-html-tags": "*",
     "hexlet-pairs": "*",
     "hexlet-pairs-data": "*",
-    "hexlet-points": "*"
+    "hexlet-points": "*",
+    "jest-cli": "^21.2.1"
   },
   "devDependencies": {
     "babel-cli": "*",
