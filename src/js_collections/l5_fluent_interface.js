@@ -43,11 +43,31 @@ class Enumerable {
   }
 
   // BEGIN (write your solution here)
-
+  select(fn) {
+    this.collection = this.collection.map(fn);
+    return this;
+  }
   // END
 
   // BEGIN (write your solution here)
+  orderBy(fn, message) {
+    const compareNumbers = (a, b) => {
+      const elA = fn(a);
+      const elB = fn(b);
+      if (elA > elB) {
+        return 1;
+      } else if (elA < elB) {
+        return -1;
+      } return 0;
+    };
 
+    if (message === 'desc') {
+      this.collection = this.collection.sort(compareNumbers).reverse();
+    } else {
+      this.collection = this.collection.sort(compareNumbers);
+    }
+    return this;
+  }
   // END
 
   where(fn) {
@@ -61,3 +81,25 @@ class Enumerable {
 }
 
 export default Enumerable;
+
+// // TESTING
+// const putsArray = arr => arr.forEach(el => console.log(el));
+//
+// const cars = [
+//   { brand: 'bmw', model: 'm5', year: 2014 },
+//   { brand: 'bmw', model: 'm4', year: 2013 },
+//   { brand: 'kia', model: 'sorento', year: 2014 },
+//   { brand: 'kia', model: 'rio', year: 2010 },
+//   { brand: 'kia', model: 'sportage', year: 2012 },
+// ];
+// // putsArray(cars);
+//
+// const coll = new Enumerable(cars);
+//
+// // // Test EX1: select
+// // const models = coll.select(car => car.model);
+// // putsArray(models.toArray()); // ['m5', 'm4', 'sorento', 'rio', 'sportage']);
+//
+// // Test EX2: OrderBy
+// const ordItems = coll.orderBy(car => car.model).select(car => car.model);
+// putsArray(ordItems.toArray()); // ["m4", "m5", "rio", "sorento", "sportage"]
