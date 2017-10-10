@@ -21,38 +21,15 @@ stopWords это список стоп-слов, то есть эти слова
 
 // BEGIN (write your solution here)
 
-const occurrences = (elem, arr) => arr.filter(currEl => currEl === elem).length;
-
-const removeOccurences = (word, arr) => arr.filter(elem => (elem !== word));
-
-const removeStopWords = (words, stopWords) => {
-  let iterList = words;
-  stopWords.forEach((elem) => {
-    iterList = removeOccurences(elem, iterList);
-  });
-  return iterList;
-};
-
-export const wordsCount = (words, stopWords) => {
-  const wordsInLowerCase = words.map(word => word.toLowerCase());
-  // console.log(`>>>>    LowerCase:  ${wordsInLowerCase}`);
-  const pureWords = removeStopWords(wordsInLowerCase, stopWords);
-  // console.log(`>>>>    pureWords:  ${pureWords}`);
-
-  const map = new Map();
-
-  const iter = (wordsList) => {
-    if (wordsList.length === 0) {
-      return map;
-    }
-    const word = wordsList[0];
-    const counter = occurrences(word, wordsList);
-    map.set(word, counter);
-    const newList = removeOccurences(word, wordsList);
-    return iter(newList);
-  };
-  return iter(pureWords);
-};
+export const wordsCount = (words, stopWords) =>
+  words.map(word => word.toLowerCase())
+    .filter(word => !stopWords.includes(word))
+    .reduce((acc, word) => {
+      if (!acc.has(word)) {
+        return acc.set(word, 1);
+      }
+      return acc.set(word, acc.get(word) + 1);
+    }, new Map());
 
 export default wordsCount;
 // END
