@@ -50,22 +50,22 @@ class Enumerable {
   // END
 
   // BEGIN (write your solution here)
-  orderBy(fn, message) {
-    const compareNumbers = (a, b) => {
+  orderBy(fn, message = 'asc') {
+    const comparator = (a, b) => {
       const elA = fn(a);
       const elB = fn(b);
+      const compareResult = message === 'asc' ? 1 : -1;
+
       if (elA > elB) {
-        return 1;
+        return compareResult;
       } else if (elA < elB) {
-        return -1;
-      } return 0;
+        return -compareResult;
+      }
+
+      return 0;
     };
 
-    if (message === 'desc') {
-      this.collection = this.collection.sort(compareNumbers).reverse();
-    } else {
-      this.collection = this.collection.sort(compareNumbers);
-    }
+    this.collection.sort(comparator);
     return this;
   }
   // END
