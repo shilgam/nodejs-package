@@ -9,47 +9,58 @@ select, where, orderBy, toArray.
 
 class Enumerable {
   // BEGIN (write your solution here)
-  constructor(collection) {
+  constructor(collection, operations) {
     this.collection = collection;
+    this.operations = operations || [];
   }
 
   select(fn) {
-    const selected = this.collection.map(fn);
-    return new Enumerable(selected);
+    const newColl = this.collection.slice();
+    const newOps = this.operations.slice();
+    newOps.push(coll => coll.map(fn));
+    return new Enumerable(newColl, newOps);
   }
 
   orderBy(fn, direction = 'asc') {
+    const newColl = this.collection.slice();
+    const newOps = this.operations.slice();
+
     const comparator = (a, b) => {
       const elA = fn(a);
       const elB = fn(b);
       const compareResult = direction === 'asc' ? 1 : -1;
-
       if (elA > elB) {
         return compareResult;
       } else if (elA < elB) {
         return -compareResult;
       }
-
       return 0;
     };
-    const sorted = this.collection.slice().sort(comparator);
-    return new Enumerable(sorted);
+    newOps.push(coll => coll.sort(comparator));
+    return new Enumerable(newColl, newOps);
   }
 
   where(fn) {
-    const filtered = this.collection.filter(fn);
-    return new Enumerable(filtered);
+    const newColl = this.collection.slice();
+    const newOps = this.operations.slice();
+    newOps.push(coll => coll.filter(fn));
+    return new Enumerable(newColl, newOps);
   }
 
   toArray() {
-    return this.collection;
+    const newColl = this.collection.slice();
+    const newOps = this.operations.slice();
+    const ops = attr =>
+      newOps.reduce((accum, operation) => operation(accum), attr);
+
+    return ops(newColl);
   }
   // END
 }
 
 export default Enumerable;
 
-// // TESTING
+// /* TESTING: */
 // const putsArray = arr => arr.forEach(el => console.log(el));
 //
 // const cars = [
@@ -62,11 +73,20 @@ export default Enumerable;
 //
 // const coll = new Enumerable(cars);
 //
-// // // Test EX1: select
-// console.log('>>> select:');
+// /* SELECT */ console.log('> > > > EX1: SELECT');
 // const selected = coll.select(car => car.model);
 // putsArray(selected.toArray()); // ['m5', 'm4', 'sorento', 'rio', 'sportage']);
-// // Test EX2: OrderBy
-// console.log('>>> orderBy:');
+// console.log('---------');
+//
+// /* ORDER BY */ console.log('> > > > EX2: ORDER BY');
 // const sorted = coll.orderBy(car => car.model).select(car => car.model);
 // putsArray(sorted.toArray()); // ["m4", "m5", "rio", "sorento", "sportage"]
+// console.log('---------');
+//
+// /* IMMUTABLE */ console.log('> > > > EX3: SHOULD BE IMMUTABLE');
+// const result = coll.where(car => car.brand === 'kia')
+//   .where(car => car.year > 2011).select(car => car.model);
+// putsArray(result.toArray()); // ['sorento', 'sportage']
+// console.log('- - - - -');
+// coll.collection.push({ brand: 'kia', model: 'optima', year: 2013 });
+// putsArray(result.toArray()); // ['sorento', 'sportage']
