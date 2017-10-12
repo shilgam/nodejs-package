@@ -9,8 +9,8 @@ class Enumerable {
 
   select(fn) {
     // BEGIN (write your solution here)
-    this.collection = this.collection.map(fn);
-    return this;
+    const selected = this.collection.map(fn);
+    return new Enumerable(selected);
     // END
   }
 
@@ -29,9 +29,8 @@ class Enumerable {
 
       return 0;
     };
-
-    this.collection.sort(comparator);
-    return this;
+    const sorted = this.collection.slice().sort(comparator);
+    return new Enumerable(sorted);
     // END
   }
 
@@ -62,9 +61,14 @@ export default Enumerable;
 // const coll = new Enumerable(cars);
 //
 // // // Test EX1: select
-// // const models = coll.select(car => car.model);
-// // putsArray(models.toArray()); // ['m5', 'm4', 'sorento', 'rio', 'sportage']);
-//
+// // const selected = coll.select(car => car.model);
+// // console.log('>>> Applying select() to collection:');
+// // putsArray(selected.toArray()); // ['m5', 'm4', 'sorento', 'rio', 'sportage']);
+// // console.log('>>> Original collection:');
+// // putsArray(coll.select(car => car.brand).toArray());  // all brands
 // // Test EX2: OrderBy
-// const ordItems = coll.orderBy(car => car.model).select(car => car.model);
-// putsArray(ordItems.toArray()); // ["m4", "m5", "rio", "sorento", "sportage"]
+// const sorted = coll.orderBy(car => car.model).select(car => car.model);
+// console.log('>>> Applying orderBy() to collection:');
+// putsArray(sorted.toArray()); // ["m4", "m5", "rio", "sorento", "sportage"]
+// console.log('>>> Original collection:');
+// putsArray(coll.select(car => car.model).toArray()); // ['m5', 'm4', 'sorento', 'rio', 'sportage']);
