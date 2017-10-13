@@ -25,7 +25,9 @@ class Enumerable {
   }
 
   // BEGIN (write your solution here)
-
+  where(fn) {
+    return this.build(coll => coll.filter(fn));
+  }
   // END
 
   get length() {
@@ -44,27 +46,27 @@ class Enumerable {
 export default Enumerable;
 
 /* TESTING */
-// const putsArray = arr => arr.forEach(el => console.log(el));
-//
-// const cars = [
-//   { brand: 'bmw', model: 'm5', year: 2014 },
-//   { brand: 'bmw', model: 'm4', year: 2013 },
-//   { brand: 'kia', model: 'sorento', year: 2014 },
-//   { brand: 'kia', model: 'rio', year: 2010 },
-//   { brand: 'kia', model: 'sportage', year: 2012 },
-// ];
-// const coll = new Enumerable(cars);
-//
-// const result = coll
-//   .where(car => car.brand === 'kia')
-//   .where(car => car.year > 2011);
-//
-// putsArray(result.toArray());
-// /* [
-//      { brand: 'kia', model: 'sorento', year: 2014 },
-//      { brand: 'kia', model: 'sportage', year: 2012 },
-//    ] */
-// console.log('---------');
+const putsArray = arr => arr.forEach(el => console.log(el));
+
+const cars = [
+  { brand: 'bmw', model: 'm5', year: 2014 },
+  { brand: 'bmw', model: 'm4', year: 2013 },
+  { brand: 'kia', model: 'sorento', year: 2014 },
+  { brand: 'kia', model: 'rio', year: 2010 },
+  { brand: 'kia', model: 'sportage', year: 2012 },
+];
+const coll = new Enumerable(cars);
+
+const result = coll
+  .where(car => car.brand === 'kia')
+  .where(car => car.year > 2011);
+
+putsArray(result.toArray());
+/* [
+     { brand: 'kia', model: 'sorento', year: 2014 },
+     { brand: 'kia', model: 'sportage', year: 2012 },
+   ] */
+console.log('---------');
 //
 // const result2 = coll.where({ brand: 'bmw' });
 // putsArray(result2.toArray());
