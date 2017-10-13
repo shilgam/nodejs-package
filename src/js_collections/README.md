@@ -1,3 +1,5 @@
+# Content
+
 Course: https://ru.hexlet.io/courses/js_collections
 
 Этот курс посвящен конкретным приемам в работе с коллекциями, которые используются в языке JavaScript, а также изучению основных типов данных:
@@ -12,4 +14,43 @@ Course: https://ru.hexlet.io/courses/js_collections
 * так называемых spread- и rest-операций и
 * техник разрушающих присваиваний.
 
-Сначала рекомендуем пройти курс: [JS: Программирование, управляемое данными](https://ru.hexlet.io/courses/ddp)
+Сначала рекомендуем пройти курс: "JS: Программирование, управляемое данными" ('js_data_driven_programming')
+
+## Lesson 8
+### Создание динамических свойств
+
+Проблема: Как определять длину массива immutable коллекции (for Lazy Evaluation)?
+Как реализовать такое свойство объекта?
+
+```
+class Enumerable {
+  get length() {
+    return ...
+  }
+}
+
+const result = coll;
+  .where(car => car.brand === 'kia')
+  .where(car => car.year > 2011);
+
+result.length; // 2
+```
+
+Solution in js -- getter
+
+Есть проблема: вычисления произвродятся заново при каждом запуске `result.length;` и `result.toArray();`
+
+### Паттерн мемоизация
+Мемоизация -- сохранение результатов выполнения Функций для предотвращения повторных вычислений.
+
+```
+methodName() {
+  if (!this.memo) {
+    this.memo = ...;
+  }
+  return this.memo;
+}
+
+methodName();
+methodName(); // memo
+```
