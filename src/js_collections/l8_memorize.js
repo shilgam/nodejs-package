@@ -41,8 +41,16 @@ class Enumerable {
   }
 
   // BEGIN (write your solution here)
+  get length() {
+    return this.toArray().length;
+  }
+
   toArray() {
-    return this.operations.reduce((accum, operation) => operation(accum), this.collection);
+    if (!this.memo) {
+      const newOps = this.operations;
+      this.memo = newOps.reduce((accum, operation) => operation(accum), this.collection);
+    }
+    return this.memo;
   }
   // END
 }
@@ -72,10 +80,17 @@ export default Enumerable;
 // putsArray(sorted.toArray()); // ["m4", "m5", "rio", "sorento", "sportage"]
 // console.log('---------');
 //
-// /* IMMUTABLE */ console.log('> > > > EX3: SHOULD BE IMMUTABLE');
-// const result = coll.where(car => car.brand === 'kia')
-//   .where(car => car.year > 2011).select(car => car.model);
-// putsArray(result.toArray()); // ['sorento', 'sportage']
-// console.log('- - - - -');
-// coll.collection.push({ brand: 'kia', model: 'optima', year: 2013 });
-// putsArray(result.toArray()); // ['sorento', 'sportage']
+// /* IMMUTABLE */ console.log('> > > > EX3: SHOULD BE IMMUTABLE #2');
+// const result = coll
+//   .where(car => car.brand === 'kia')
+//   .where(car => car.year > 2011);
+//
+// const result2 = coll
+//   .orderBy(car => car.year, 'asc')
+//   .where(car => car.model === 'sorento');
+//
+// putsArray(result2.toArray()); // length .toBe(1);
+// console.log('---------');
+// putsArray(result2.toArray()); // length .toBe(1);
+// console.log('---------');
+// console.log(`>>> result.length: ${result2.length}`); // 1
