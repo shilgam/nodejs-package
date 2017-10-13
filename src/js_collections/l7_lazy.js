@@ -14,17 +14,17 @@ class Enumerable {
     this.operations = operations || [];
   }
 
-  select(fn) {
+  build(fn) {
     const newColl = this.collection.slice();
-    const newOps = this.operations.slice();
-    newOps.push(coll => coll.map(fn));
+    const newOps = this.operations.concat(fn);
     return new Enumerable(newColl, newOps);
   }
 
-  orderBy(fn, direction = 'asc') {
-    const newColl = this.collection.slice();
-    const newOps = this.operations.slice();
+  select(fn) {
+    return this.build(coll => coll.map(fn));
+  }
 
+  orderBy(fn, direction = 'asc') {
     const comparator = (a, b) => {
       const elA = fn(a);
       const elB = fn(b);
@@ -36,24 +36,16 @@ class Enumerable {
       }
       return 0;
     };
-    newOps.push(coll => coll.sort(comparator));
-    return new Enumerable(newColl, newOps);
+
+    return this.build(coll => coll.sort(comparator));
   }
 
   where(fn) {
-    const newColl = this.collection.slice();
-    const newOps = this.operations.slice();
-    newOps.push(coll => coll.filter(fn));
-    return new Enumerable(newColl, newOps);
+    return this.build(coll => coll.filter(fn));
   }
 
   toArray() {
-    const newColl = this.collection.slice();
-    const newOps = this.operations.slice();
-    const ops = attr =>
-      newOps.reduce((accum, operation) => operation(accum), attr);
-
-    return ops(newColl);
+    return this.operations.reduce((accum, operation) => operation(accum), this.collection);
   }
   // END
 }
