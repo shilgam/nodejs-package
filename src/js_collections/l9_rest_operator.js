@@ -25,8 +25,26 @@ class Enumerable {
   }
 
   // BEGIN (write your solution here)
-  where(fn) {
-    return this.build(coll => coll.filter(fn));
+  where(...args) {
+    const newOps = this.operations.slice();
+
+    const saveOperation = func => newOps.push(coll => coll.filter(func));
+
+    const rowter = (argument) => {
+      if (typeof argument === 'function') {
+        saveOperation(argument);
+      }
+      if (typeof argument === 'object') {
+        const keys = Object.keys(argument);
+        const vals = Object.values(argument);
+        keys.forEach((car, index) =>
+          saveOperation(car => car[keys[index]] === vals[index]));
+      }
+    };
+
+    args.forEach(rowter);
+
+    return this.build(newOps);
   }
   // END
 
@@ -45,28 +63,28 @@ class Enumerable {
 
 export default Enumerable;
 
-/* TESTING */
-const putsArray = arr => arr.forEach(el => console.log(el));
-
-const cars = [
-  { brand: 'bmw', model: 'm5', year: 2014 },
-  { brand: 'bmw', model: 'm4', year: 2013 },
-  { brand: 'kia', model: 'sorento', year: 2014 },
-  { brand: 'kia', model: 'rio', year: 2010 },
-  { brand: 'kia', model: 'sportage', year: 2012 },
-];
-const coll = new Enumerable(cars);
-
-const result = coll
-  .where(car => car.brand === 'kia')
-  .where(car => car.year > 2011);
-
-putsArray(result.toArray());
-/* [
-     { brand: 'kia', model: 'sorento', year: 2014 },
-     { brand: 'kia', model: 'sportage', year: 2012 },
-   ] */
-console.log('---------');
+// /* TESTING */
+// const putsArray = arr => arr.forEach(el => console.log(el));
+//
+// const cars = [
+//   { brand: 'bmw', model: 'm5', year: 2014 },
+//   { brand: 'bmw', model: 'm4', year: 2013 },
+//   { brand: 'kia', model: 'sorento', year: 2014 },
+//   { brand: 'kia', model: 'rio', year: 2010 },
+//   { brand: 'kia', model: 'sportage', year: 2012 },
+// ];
+// const coll = new Enumerable(cars);
+//
+// const result = coll
+//   .where(car => car.brand === 'kia', car => car.year > 2011);
+//   // .where(car => car.year > 2011);
+//
+// putsArray(result.toArray());
+// /* [
+//      { brand: 'kia', model: 'sorento', year: 2014 },
+//      { brand: 'kia', model: 'sportage', year: 2012 },
+//    ] */
+// console.log('---------');
 //
 // const result2 = coll.where({ brand: 'bmw' });
 // putsArray(result2.toArray());
