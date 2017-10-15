@@ -22,7 +22,7 @@ Course: https://ru.hexlet.io/courses/js_collections
 Проблема: Как определять длину массива immutable коллекции (for Lazy Evaluation)?
 Как реализовать такое свойство объекта?
 
-```
+```js
 class Enumerable {
   get length() {
     return ...
@@ -43,7 +43,7 @@ Solution in js -- getter
 ### Паттерн мемоизация
 Мемоизация -- сохранение результатов выполнения Функций для предотвращения повторных вычислений.
 
-```
+```js
 methodName() {
   if (!this.memo) {
     this.memo = ...;
@@ -53,4 +53,18 @@ methodName() {
 
 methodName();
 methodName(); // memo
+```
+## Lesson 9. Операция rest
+
+```js
+const fn = (a, b, ...args) => {
+  console.log(a);
+  console.log(b);
+  console.log(args);
+};
+
+fn('first');
+// first
+// undefined
+// []
 ```
