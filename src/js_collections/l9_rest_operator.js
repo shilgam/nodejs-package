@@ -25,26 +25,17 @@ class Enumerable {
   }
 
   // BEGIN (write your solution here)
-  where(...args) {
-    const newOps = this.operations.slice();
-
-    const saveOperation = func => newOps.push(coll => coll.filter(func));
-
-    const rowter = (argument) => {
-      if (typeof argument === 'function') {
-        saveOperation(argument);
+  where(...predicates) {
+    const fns = predicates.map((predicate) => {
+      if (typeof predicate === 'function') {
+        return coll => coll.filter(predicate);
       }
-      if (typeof argument === 'object') {
-        const keys = Object.keys(argument);
-        const vals = Object.values(argument);
-        keys.forEach((car, index) =>
-          saveOperation(car => car[keys[index]] === vals[index]));
-      }
-    };
 
-    args.forEach(rowter);
-
-    return this.build(newOps);
+      const keys = Object.keys(predicate);
+      return coll => coll.filter(element =>
+        keys.every(key => predicate[key] === element[key]));
+    });
+    return this.build(fns);
   }
   // END
 
