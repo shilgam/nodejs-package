@@ -54,7 +54,7 @@ methodName() {
 methodName();
 methodName(); // memo
 ```
-## Lesson 9. Операция rest
+## Lesson 9. Операция REST
 
 ```js
 const fn = (a, b, ...args) => {
@@ -67,4 +67,21 @@ fn('first');
 // first
 // undefined
 // []
+```
+
+## Lesson 10. Операция SPREAD
+Оператор расширения позволяет расширять выражения в тех местах, где предусмотрено использование нескольких аргументов (при вызовах функции) или ожидается несколько элементов (для массивов).
+
+1. Применение к массивам. (Immutable REDUCE)
+```js
+const arr = [1, 2, 3];
+arr.reduce(accum, value) => [accum, value, value], []);
+// [1, 1, 2, 2, 3, 3]
+```
+
+2. Применение к объектам.
+    ```js
+const obj = { key: 'value' };
+console.log({ ...obj, port: 80 });
+// { key: 'value', port: 80 }
 ```
