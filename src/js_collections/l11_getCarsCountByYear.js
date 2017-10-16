@@ -23,6 +23,13 @@
 */
 
 // BEGIN (write your solution here)
+const getCarsCountByYear = cars => cars.reduce((accum, currCar) => {
+  const quantity = cars.filter(car => car.year === currCar.year).length;
+  return { ...accum, [currCar.year]: quantity };
+},
+0);
+
+export default getCarsCountByYear;
 
 // END
 
