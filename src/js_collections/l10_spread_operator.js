@@ -16,7 +16,14 @@
 */
 
 // BEGIN (write your solution here)
+const objectify = (coll, selectFunc) =>
+  coll.reduce((accum, car) => {
+    const key = selectFunc(car);
+    return { ...accum, [key]: car };
+  },
+  {});
 
+export default objectify;
 // END
 
 /* TESTING */
