@@ -28,9 +28,9 @@ const getCarsCountByYear = (cars) => {
     if (coll.length === 0) {
       return accum;
     }
-    const [first, ...rest] = coll;
-    const quantity = cars.filter(car => car.year === first.year).length;
-    return iter(rest, { ...accum, [first.year]: quantity });
+    const [{ year }, ...rest] = coll;
+    const newValue = accum[year] ? accum[year] + 1 : 1;
+    return iter(rest, { ...accum, [year]: newValue });
   };
   return iter(cars, {});
 };
