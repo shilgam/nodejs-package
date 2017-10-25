@@ -11,29 +11,41 @@ import _ from 'lodash'; // eslint-disable-line
 */
 
 // BEGIN (write your solution here)
-const buildHtml = (tag) => {
+const propertyActions = [
+  {
+    name: 'body',
+    check: arg => typeof arg === 'string',
+  },
+  {
+    name: 'children',
+    check: arg => arg instanceof Array,
+  },
+  {
+    name: 'attributes',
+    check: arg => arg instanceof Object,
+  },
+];
 
-  const iter = (chain, accum) => {
-    const tagName = chain[0];
-    let attributes = '';
-    const tail = chain.slice().splice(1);
-    const newTail = tail.map((el) => {
-      if (typeof el === 'string') {
-        return el;
-      } else if (el instanceof Array) {
-        const children = el.map(child => iter(child, []));
-        return children.join('');
-      } else if (el instanceof Object) {
-        const keys = Object.keys(el);
-        const attr = keys.map(key => `${key}="${el[key]}"`).join(' ');
-        attributes = ` ${attr}`;
-      }
-      return null; // TO DO
-    });
-    return `<${tagName}${attributes}>${newTail.join('')}</${tagName}>`;
-  };
-  return iter(tag, []);
+const getPropertyAction = arg => _.find(propertyActions, ({ check }) => check(arg));
+
+const buildAttrString = attrs =>
+  Object.keys(attrs).map(key => ` ${key}="${attrs[key]}"`).join('');
+
+const buildHtml = (data) => {
+  const [first, ...rest] = data;
+  const root = { name: first, attributes: {}, body: '', children: [] };
+  const tag = rest
+    .reduce((acc, arg) => {
+      const { name } = getPropertyAction(arg);
+      return { ...acc, [name]: arg };
+    }, root);
+
+  return [`<${tag.name}${buildAttrString(tag.attributes)}>`,
+    `${tag.body}${tag.children.map(buildHtml).join('')}`,
+    `</${tag.name}>`,
+  ].join('');
 };
+
 export default buildHtml;
 // END
 
