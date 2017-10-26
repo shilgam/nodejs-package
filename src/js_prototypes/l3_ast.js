@@ -26,7 +26,42 @@ import { find, identity } from 'lodash'; // eslint-disable-line
 const singleTagsList = new Set(['hr', 'img', 'br']);
 
 // BEGIN (write your solution here)
+const propertyActions = [
+  {
+    name: 'body',
+    check: arg => typeof arg === 'string',
+  },
+  {
+    name: 'children',
+    check: arg => arg instanceof Array,
+  },
+  {
+    name: 'attributes',
+    check: arg => arg instanceof Object,
+  },
+];
 
+const getPropertyAction = arg => find(propertyActions, ({ check }) => check(arg));
+
+const buildAttrString = data =>
+  Object.keys(data).map(key => ` ${key}="${data[key]}"`).join('');
+
+export const parse = (data) => {
+  const [first, ...rest] = data;
+  const root = { name: first, attributes: {}, body: '', children: [] };
+  const tag = rest
+    .reduce((acc, arg) => {
+      const { name } = getPropertyAction(arg);
+      return { ...acc, [name]: arg };
+    }, root);
+
+  return [`<${tag.name}${buildAttrString(tag.attributes)}>`,
+    `${tag.body}${tag.children.map(parse).join('')}`,
+    `</${tag.name}>`,
+  ].join('');
+};
+
+export const render = html => html;
 // END
 
 /* TESTING */
@@ -40,6 +75,7 @@ const singleTagsList = new Set(['hr', 'img', 'br']);
 // ]];
 //
 // const ast = parse(data);
+// console.log(ast);
 /*
 { name: 'html', attributes: {}, body: '', children: [
   { name: 'meta', attributes: { id: 'uniq-key' }, body: '', children: [
