@@ -5,9 +5,8 @@ import SingleTag from './SingleTag';
 const singleTagsList = new Set(['hr', 'img', 'br']);
 
 const buildNode = (name, ...args) => {
-  if (singleTagsList.has(name)) {
-    return new SingleTag(name, ...args);
-  } return new PairedTag(name, ...args);
+  const C = (singleTagsList.has(name)) ? SingleTag : PairedTag;
+  return new C(name, ...args);
 };
 export default buildNode;
 // END
