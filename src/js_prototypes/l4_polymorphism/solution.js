@@ -42,3 +42,16 @@ const parse = (data) => {
 };
 
 export default parse;
+
+/* DEBUG */
+// const data = ['html', [
+//   ['meta', { id: 'uniq-key' }, [
+//     ['title', 'hello, hexlet!'],
+//   ]],
+//   ['body', [
+//     ['br'],
+//   ]],
+// ]];
+//
+// const ast = parse(data);
+// console.log(`> > > > >           ast: ${JSON.stringify(ast, null, 2)}`);
