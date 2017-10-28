@@ -43,25 +43,26 @@ const propertyActions = [
 
 const getPropertyAction = arg => find(propertyActions, ({ check }) => check(arg));
 
-const buildAttrString = data =>
-  Object.keys(data).map(key => ` ${key}="${data[key]}"`).join('');
-
 export const parse = (data) => {
   const [first, ...rest] = data;
-  const root = { name: first, attributes: {}, body: '', children: [] };
-  const tag = rest
-    .reduce((acc, arg) => {
-      const { name } = getPropertyAction(arg);
-      return { ...acc, [name]: arg };
-    }, root);
-
-  return [`<${tag.name}${buildAttrString(tag.attributes)}>`,
-    `${tag.body}${tag.children.map(parse).join('')}`,
-    `</${tag.name}>`,
-  ].join('');
+  const ast = { name: first, attributes: {}, body: '', children: [] };
+  rest.forEach((attr) => {
+    const key = getPropertyAction(attr).name;
+    if (key === 'children' && key.length !== 0) {
+      ast[key] = attr.map(child => parse(child));
+    } else {
+      ast[key] = attr;
+    }
+  });
+  return ast;
 };
 
-export const render = html => html;
+export const render = (ast) => {
+  const closeTab = (singleTagsList.has(ast.name)) ? '' : `</${ast.name}>`;
+  const attributes = (Object.keys(ast.attributes).length === 0) ? '' : ` ${Object.keys(ast.attributes).map(key => `${key}="${ast.attributes[key]}"`).join(' ')}`;
+  const children = (ast.children).reduce((acc, child) => `${acc}${render(child)}`, '');
+  return `<${ast.name}${attributes}>${ast.body}${children}${closeTab}`;
+};
 // END
 
 /* TESTING */
@@ -75,7 +76,9 @@ export const render = html => html;
 // ]];
 //
 // const ast = parse(data);
-// console.log(ast);
+// console.log(`> > > > >           ast: ${JSON.stringify(ast, null, 2)}`);
+// const rendered = render(ast);
+// console.log(`> > > > > rendered html: ${rendered}`);
 /*
 { name: 'html', attributes: {}, body: '', children: [
   { name: 'meta', attributes: { id: 'uniq-key' }, body: '', children: [
