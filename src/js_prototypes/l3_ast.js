@@ -45,23 +45,20 @@ const getPropertyAction = arg => find(propertyActions, ({ check }) => check(arg)
 
 export const parse = (data) => {
   const [first, ...rest] = data;
-  const ast = { name: first, attributes: {}, body: '', children: [] };
-  rest.forEach((attr) => {
+  const root = { name: first, attributes: {}, body: '', children: [] };
+  return rest.reduce((acc, attr) => {
     const key = getPropertyAction(attr).name;
-    if (key === 'children' && key.length !== 0) {
-      ast[key] = attr.map(child => parse(child));
-    } else {
-      ast[key] = attr;
-    }
-  });
-  return ast;
+    const val = (key === 'children') ? attr.map(child => parse(child)) : attr;
+    return { ...acc, [key]: val };
+  }, root);
 };
 
-export const render = (ast) => {
-  const closeTab = (singleTagsList.has(ast.name)) ? '' : `</${ast.name}>`;
-  const attributes = (Object.keys(ast.attributes).length === 0) ? '' : ` ${Object.keys(ast.attributes).map(key => `${key}="${ast.attributes[key]}"`).join(' ')}`;
-  const children = (ast.children).reduce((acc, child) => `${acc}${render(child)}`, '');
-  return `<${ast.name}${attributes}>${ast.body}${children}${closeTab}`;
+export const render = ({ name, body, children, attributes }) => {
+  const closeName = (singleTagsList.has(name)) ? '' : `</${name}>`;
+  const attrLine = Object.keys(attributes)
+    .map(key => ` ${key}="${attributes[key]}"`).join('');
+  const content = (children.length === 0) ? body : children.map(render).join('');
+  return `<${name}${attrLine}>${content}${closeName}`;
 };
 // END
 
