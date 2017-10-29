@@ -1,10 +1,10 @@
 // BEGIN (write your solution here)
 export default class Node {
-  constructor(name, attributes = {}, body = '', children = []) {
+  constructor(name, attributes) {
     this.name = name;
     this.attributes = attributes;
-    this.body = body;
-    this.children = children;
+    // this.body = body;
+    // this.children = children;
   }
 
   getAttributesAsLine() {

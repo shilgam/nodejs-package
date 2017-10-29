@@ -2,8 +2,8 @@
 import Node from './Node';
 
 export default class SingleTag extends Node {
-  constructor(name, attributes = {}, body = '', children = []) {
-    super(name, attributes, body, children);
+  constructor(name, attributes = {}) {
+    super(name, attributes);
   }
 
   toString() {
