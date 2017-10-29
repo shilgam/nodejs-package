@@ -1,6 +1,5 @@
-import parse from '../../src/js_prototypes/l5_inheritance/solution';
-import PairedTag from '../../src/js_prototypes/l5_inheritance/PairedTag';
-import SingleTag from '../../src/js_prototypes/l5_inheritance/SingleTag';
+import parse from '../../src/js_prototypes/l6_inheritance/solution';
+import buildNode from '../../src/js_prototypes/l6_inheritance/buildNode';
 
 describe('HtmlBuilder', () => {
   it('#parse', () => {
@@ -18,15 +17,15 @@ describe('HtmlBuilder', () => {
     ]];
 
     const ast = parse(data);
-    const expected = new PairedTag('html', {}, '', [
-      new PairedTag('head', {}, '', [
-        new PairedTag('title', {}, 'hello, hexlet!'),
+    const expected = buildNode('html', {}, '', [
+      buildNode('head', {}, '', [
+        buildNode('title', {}, 'hello, hexlet!'),
       ]),
-      new PairedTag('body', {}, '', [
-        new PairedTag('h1', { class: 'header' }, 'html builder example'),
-        new PairedTag('div', {}, '', [
-          new PairedTag('span', {}, 'span text'),
-          new SingleTag('hr'),
+      buildNode('body', {}, '', [
+        buildNode('h1', { class: 'header' }, 'html builder example'),
+        buildNode('div', {}, '', [
+          buildNode('span', {}, 'span text'),
+          buildNode('hr'),
         ]),
       ]),
     ]);

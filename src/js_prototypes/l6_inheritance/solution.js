@@ -2,6 +2,13 @@ import _ from 'lodash'; // eslint-disable-line
 
 import buildNode from './buildNode';
 
+/*  >>>>>  EX 1  <<<<< Node.js
+Реализуйте базовый класс `Node` таким чтобы он содержал в себе общую логику
+
+    >>>>>  EX 2  <<<<< PairedTag.js, SingleTag.js
+Реализуйте типы тегов как подтипы типа Node.
+*/
+
 const propertyActions = [
   {
     name: 'body',
@@ -23,12 +30,11 @@ const propertyActions = [
 const getPropertyAction = arg => _.find(propertyActions, ({ check }) => check(arg));
 
 const parse = (data) => {
-  const [first, ...rest] = data;
-  const root = { name: first, attributes: {}, body: '', children: [] };
-  const args = rest.reduce((acc, arg) => {
-    const { name, process } = getPropertyAction(arg);
-    return { ...acc, [name]: process(arg, parse) };
-  }, root);
+  const args = data.slice(1)
+    .reduce((acc, arg) => {
+      const { name, process } = getPropertyAction(arg);
+      return { ...acc, [name]: process(arg, parse) };
+    }, { name: data[0], attributes: {}, body: '', children: [] });
   return buildNode(args.name, args.attributes, args.body, args.children);
 };
 
