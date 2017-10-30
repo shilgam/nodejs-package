@@ -92,3 +92,44 @@ __Принцип Лисков__ (SOLID) по Фаулеру:
 * Это способ строить иерархии типов
 * Не зависит от чуществования классов
 * Чаще используется для сокращения дублирования
+
+## Lesson 7: Функции как объекты
+
+__Функция это объект:__
+
+```js
+const f = name => `hello, ${name}`;
+typeof f // function
+
+f instanceof Object; // true
+f.length // 1 (# of args)
+f.toString() // name => `hello, ${ name }`
+f.wrongProperty; // undefined
+```
+
+__Класс это функция:__
+```js
+class Node {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+console.log(typeof node);  // function
+```
+
+Как определяется класс без класса?
+```js
+// функция в развернутом представлении:
+function Node(name) {
+  this.name = name;
+}
+
+node = new Node('table');
+node.name; // table
+
+// Cтрелочные функции нельзя использовать с `new`:
+new ((name) => { this.name = name; })
+// TypeError: (name) => { this.name = name; }
+// is not a constructor
+```
