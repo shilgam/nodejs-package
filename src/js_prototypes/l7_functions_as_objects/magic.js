@@ -25,5 +25,17 @@
 > obj + 7; // 10
 */
 // BEGIN (write your solution here)
+const magic = (...numbers) => {
+  const sum = numbers.reduce((acc, x) => acc + x, 0);
+  const inner = (...rest) => magic(sum, ...rest);
+  inner.valueOf = () => sum;
+  return inner;
+};
 
+export default magic;
 // END
+
+// console.log(magic(3, 6, 7, 9) + 0); // 25
+// console.log(magic() == 0); // true
+// console.log(magic(2)(6, 2) == 10); // true
+// console.log(magic(1, 2)(3, 4, 5)(6)(7, 10) == 38); // true

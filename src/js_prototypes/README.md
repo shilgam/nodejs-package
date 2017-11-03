@@ -118,7 +118,7 @@ class Node {
 console.log(typeof node);  // function
 ```
 
-Как определяется класс без класса?
+__Как определяется класс без класса?__
 ```js
 // функция в развернутом представлении:
 function Node(name) {
@@ -132,4 +132,27 @@ node.name; // table
 new ((name) => { this.name = name; })
 // TypeError: (name) => { this.name = name; }
 // is not a constructor
+```
+
+__Контекст (this):__
+```js
+function Node(name) {
+  this.name = name;
+}
+
+function New(Constructor, args) {
+  const obj = {};
+  Constructor.apply(obj, args);
+  return obj;
+}
+
+const node = New(Node, ['table']);
+node.name;
+```
+
+__apply vs call:__
+```js
+const sum = (a, b) => a + b;
+sum.apply(null, [2, 3]); // 5
+sum.call(null, 2, 3); // 5
 ```
