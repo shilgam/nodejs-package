@@ -156,3 +156,101 @@ const sum = (a, b) => a + b;
 sum.apply(null, [2, 3]); // 5
 sum.call(null, 2, 3); // 5
 ```
+
+## Lesson 8: Позднее связывание
+
+Позднее связывание - когда `this` не связывается с конкретным объектом, а зависит от контекста, в котором мы его используем.
+
+Демо особенностей работы работы `this`:
+```js
+function f(name) {
+  this.name = name;
+}
+
+const obj1 = { setName: f };
+const obj2 = { setName: f };
+
+// объекты передаются по ссылке (функция это объект),
+// поэтому в obj1 и obj2 одна и та же функция:
+obj1.setName === obj2.setName; // true
+
+obj1.setName('martin');
+obj2.setName('mike');
+
+// obj1: { 'name': 'martin' }
+// obj2: { 'name': 'mike' }
+// Функция была одна ти та же, но контекст был разным
+```
+
+Стрелочные функции сильно отличаются от именованных функций. Главное отличие - работа с `this`.
+
+
+* Именованные функции (позднее связывание):
+
+```js
+const makeNode = (name) => {
+  return {
+    name, // name: name
+    getName() { // getName: function getName {...} }
+      return this.name;
+    },
+  };
+};
+
+const obj = makeNode('table');
+
+obj; // { name: 'table', getName: [Function: getName] }
+obj.getName(); // table
+```
+
+* Стрелочные функции (раннее связывание):
+
+```js
+const makeNode = (name) => {
+  // this = undefined
+  return {
+    name,
+    getName: () => {
+      // `this` равен `this`у внешнего окружения (makeNode)
+      return this.name;
+    },
+  };
+};
+
+const obj = makeNode('table');
+
+obj; // { name: 'table', getName: [Function: getName] }
+obj.getName();
+// TypeError: Cannot read property 'name'
+// of undefined at Object.getName
+```
+
+Чуть более полная имитация классов, чем в прошлый раз (Lesson 7):
+```js
+function Node(name) {
+  this.name = name;
+  this.getName = function getName() {
+    return this.name;
+  };
+}
+
+const node = new Node('div');
+node;
+// Node { name: 'div',
+//        getName: [Function: getName] }
+
+```
+Можем реализовать наследование без использования специальных конструкций:
+```js
+function PairedNode(name, body) {
+  // передаем текущий контекст в родительский тип:
+  Node.apply(this, [name]); // super
+  this.body = body;
+}
+
+const node = new PairedNode('div', 'body');
+node;
+// PairedNode: { name: 'div',
+//               getName: [Function: getName],
+//               body: 'body' }
+```
