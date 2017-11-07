@@ -1,13 +1,13 @@
 // BEGIN (write your solution here)
-function getAttributesAsLine(node) {
-  return Object.keys(node.attributes)
-    .map(key => ` ${key}="${node.attributes[key]}"`).join('');
+function getAttributesAsLine() {
+  return Object.keys(this.attributes)
+    .map(key => ` ${key}="${this.attributes[key]}"`).join('');
 }
 
 export default function Node(name, attributes) {
   this.name = name;
   this.attributes = attributes;
-  this.getAttributesAsLine = () => getAttributesAsLine(this);
+  this.getAttributesAsLine = getAttributesAsLine;
 }
 // END
 

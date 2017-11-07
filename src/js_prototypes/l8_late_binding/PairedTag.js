@@ -1,17 +1,17 @@
 // BEGIN (write your solution here)
 import Node from './Node';
 
-function toString(node) {
-  const content = (node.children.length === 0) ?
-    node.body : node.children.map(child => child.toString()).join('');
-  return () => `<${node.name}${node.getAttributesAsLine()}>${content}</${node.name}>`;
+function toString() {
+  const content = (this.children.length === 0) ?
+    this.body : this.children.map(child => child.toString()).join('');
+  return `<${this.name}${this.getAttributesAsLine()}>${content}</${this.name}>`;
 }
 
 export default function PairedTag(name, attributes = {}, body = '', children = []) {
   Node.apply(this, [name, attributes]);
   this.body = body;
   this.children = children;
-  this.toString = toString(this);
+  this.toString = toString;
 }
 // END
 
