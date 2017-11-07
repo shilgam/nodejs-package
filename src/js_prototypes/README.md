@@ -172,20 +172,23 @@ const obj2 = { setName: f };
 
 // объекты передаются по ссылке (функция это объект),
 // поэтому в obj1 и obj2 одна и та же функция:
-obj1.setName === obj2.setName; // true
+console.log(obj1.setName === obj2.setName); // true
 
 obj1.setName('martin');
 obj2.setName('mike');
 
-// obj1: { 'name': 'martin' }
-// obj2: { 'name': 'mike' }
-// Функция была одна ти та же, но контекст был разным
+console.log(obj1);
+console.log(obj2);
+// { setName: [Function: f], name: 'martin' }
+// { setName: [Function: f], name: 'mike' }
+// Функция была одна и та же, но контекст был разным
 ```
 
 Стрелочные функции сильно отличаются от именованных функций. Главное отличие - работа с `this`.
 
+* __Именованные функции__:
 
-* Именованные функции (позднее связывание):
+`this` в именованных функциях зависит от контекста где мы его используем (Позднее связывание).
 
 ```js
 const makeNode = (name) => {
@@ -198,12 +201,21 @@ const makeNode = (name) => {
 };
 
 const obj = makeNode('table');
-
 obj; // { name: 'table', getName: [Function: getName] }
+
+/* CASE 1: Вызов в контексте объекта */
 obj.getName(); // table
+
+/* CASE 2: Вызов без контекста */
+const func = obj.getName;
+func();
+// TypeError: Cannot read property
+// 'name' of undefined
 ```
 
-* Стрелочные функции (раннее связывание):
+* __Стрелочные функции__:
+
+`this` в стрелочных функциях связывается жестко (раннее связывание)
 
 ```js
 const makeNode = (name) => {
@@ -244,6 +256,7 @@ node;
 ```js
 function PairedNode(name, body) {
   // передаем текущий контекст в родительский тип:
+  // происходит in-place обновление `this`
   Node.apply(this, [name]); // super
   this.body = body;
 }

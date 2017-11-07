@@ -1,15 +1,18 @@
 // BEGIN (write your solution here)
-export default class Node {
-  constructor(name, attributes) {
-    this.name = name;
-    this.attributes = attributes;
-    // this.body = body;
-    // this.children = children;
-  }
+function getAttributesAsLine(node) {
+  return Object.keys(node.attributes)
+    .map(key => ` ${key}="${node.attributes[key]}"`).join('');
+}
 
-  getAttributesAsLine() {
-    return Object.keys(this.attributes)
-      .map(key => ` ${key}="${this.attributes[key]}"`).join('');
-  }
+export default function Node(name, attributes) {
+  this.name = name;
+  this.attributes = attributes;
+  this.getAttributesAsLine = () => getAttributesAsLine(this);
 }
 // END
+
+/* DEBUG */
+// const node = new Node('meta', { id: 'uniq-key' });
+// console.log(`> > > > > node: ${JSON.stringify(node)}`);
+// console.log(`> > > > > node: ${node}`);
+// console.log(`> > > > > getAttributesAsLine: ${node.getAttributesAsLine()}`);
