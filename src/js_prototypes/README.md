@@ -445,3 +445,111 @@ console.log(obj1); // green
 console.log(obj2); // red
 console.log(F.prototype.color); // green
 ```
+
+## Lesson 10: Цепочки прототипов
+Механизм прототипов в js не обладал бы такой мощью, если бы не возможность строить цепочки из прототипов
+
+__Прототип моего прототипа__
+```js
+function F() {}
+const obj = new F();
+
+const proto1 = Object.getPrototypeOf(obj);
+proto1 === F.prototype; // true
+
+const proto2 = Object.getPrototypeOf(proto1);
+proto2 === Object.prototype; // true
+
+// obj -> F.prototype -> Object.prototype -> null
+```
+
+__Построение цепочек__
+
+* Наивный способ (не рабочий):
+
+```js
+function A() {}
+function B() {}
+
+// wrong way
+B.prototype = A.prototype;
+
+B.prototype.color = 'green';
+A.prototype.color; // green !!!  // меняется, т.к.
+// это один и тот же объект
+
+const obj = new B();
+
+Object.getPrototypeOf(obj) === A.prototype; // true
+// Мы не получили цепочку прототипов
+// В цепочке прототипов B() никак не участвует
+```
+
+* Рабочий способ:
+
+```js
+function A() {}
+function B() {}
+
+// right way:
+// создаем новый объект
+B.prototype = Object.create(A.prototype);
+
+B.prototype.color = 'green';
+A.prototype.color; // undefined
+
+const obj = new B();
+
+const proto1 = Object.getPrototypeOf(obj);
+
+console.log(proto1 === B.prototype); // true
+
+const proto2 = Object.getPrototypeOf(proto1);
+
+proto2 === A.prototype; // true
+```
+
+__Oбъект на основе прототипа__
+
+Cоздаем фейковый конструктор, гарантированно не содержащий side effects.
+```js
+Object.create = function create(protoObj) {
+  function F() {}
+  F.prototype = protoObj;
+  return new F();
+};
+
+function A() {}
+function B() {}
+
+B.prototype = Object.create(A.prototype);
+
+// wrong way
+B.prototype = new A();
+// причина - side effects
+```
+
+__Линковка__
+
+Линковка - еще один интересный аспект, отличающий js от других class-based языков.
+При вызове `new` происходит возврат нового объекта, который слинкован с прототипом функции.
+Вызов `new` это просто линковка.
+```js
+function F() {}
+const obj1 = new F();
+const obj2 = new F();
+
+const proto1 = Object.getPrototypeOf(obj1);
+const proto2 = Object.getPrototypeOf(obj2);
+
+proto1 === proto2; // true
+// прототип у них один и тот же
+```
+
+__Заключение__
+* В js нет классов, но есть конструкторы
+* Цепочка прототипов - основа наследования в js
+* `new` не создает "инстанс" класса/функции
+* `new` создает обычный объект и линкует его с прототипом функции
+* `instanceof` проверяет наличие прототипа в цепочке
+* Прототип объекта `Object.prototype` равен `null`
