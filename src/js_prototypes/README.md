@@ -267,3 +267,181 @@ node;
 //               getName: [Function: getName],
 //               body: 'body' }
 ```
+## Lesson 9: Прототипы
+В отличие от большинства других ОО-языков, объектная система в JavaScript основана на прототипах, а не классах.
+
+__Наследство__
+
+Объект сожержит свойства, которые на объекте не определены:
+```js
+const obj = { key: 'value' };
+
+obj.toString(); // [object Object]
+obj.valueOf(); // { key: 'value' }
+
+// Все ключи, которые определены на объекте:
+Object.getOwnPropertyNames(obj); // [ 'key' ]
+// Q: Где хранятся свойства `toString` и `valueOf`?
+```
+
+A: Эти свойства присутсвуют в прототипе объекта.
+
+def: __Прототип объекта__ -- скрытое свойство, которое находится внутри объекта.
+
+Извлечение прототипа объекта:
+```js
+const obj = { key: 'value' };
+
+// [[Prototype]]
+const proto = Object.getPrototypeOf(obj);
+
+Object.getOwnPropertyNames(proto);
+// [ 'constructor', 'hasOwnProperty',
+//   'isPrototypeOf', 'propertyIsEnumerable',
+//   'toString', 'valueOf',
+//   '__proto__', 'toLocaleString',
+//   '__defineGetter__','__defineSetter__',
+//   '__lookupGetter__', '__lookupSetter__' ]
+```
+
+Note: Прототип -- это обычный объект. "Никакой магии".
+
+
+__[[Get]]__
+
+* Как происходит обращение к свойствам любого объекта в js?
+
+* Как мы начинаем использовать те свойства, которые лежат в прототипе?
+
+```js
+obj.name; // or obj['name']
+```
+
+A: За это отвечает специальная операция `get`.
+
+Алгоритм работы `get`:
+1. Есть ли у текущего объекта свойство `name`?
+2. Есть ли у прототипа этого объекта свойство `name`?
+3. Если прототип `null`, то возвращаем `undefined`
+
+Реализуем свою собственную функию `get`, которая работает практически так же:
+```js
+const obj = { key: 'value' };
+
+/* CASE 1: Native: */
+obj.key; // value
+obj.toString; // [Function: toString]
+
+/* CASE 2: Custom: */
+const get = (obj, property) => {
+  if (obj.hasOwnProperty(property)) {
+    return obj[property];
+  } else if (Object.getPrototypeOf(obj) === null) {
+    return undefined;
+  } else {
+    return get(Object.getPrototypeOf(obj), property);
+  }
+}
+
+get(obj, 'key'); // value
+get(obj, 'toString'); // [Function: toString]
+```
+
+__Создание объектов__
+* Как в js происходит создание объектов?
+* И как объекты связаны с прототипами?
+
+```js
+// Создание объекта ({} -  это синтаксический сахар):
+const obj = new Object();
+
+typeof Object; // function
+const proto = Object.getPrototypeOf(obj); // Извлекаем прототип объекта
+
+proto === Object.prototype; // true
+// прототип внутри объекта -- это ссылка на `Object.prototype` (а не копия!)
+
+obj.prototype; // undefined
+//
+```
+Вывод:
+1. Объекты конструируются с помощью функций.
+2. Функция содержит в себе свойство `prototype`.
+3. Когда создаем объекты на основе этой функции, то внутрь объекта (во внутреннее свойство `prototype`) записывается сссылка на свойство `prototype` исходной функции.
+
+__Создание прототипа__
+
+```js
+function F() {}
+F.prototype; // {}
+
+Object.getOwnPropertyNames(F);
+// [ 'length', 'name', 'prototype' ]
+
+Object.getOwnPropertyNames(F.prototype);
+// [ 'constructor' ]
+
+const obj = new F();
+
+obj.constructor === F; // true    // (1), (2)
+obj.name; // undefined    // (3)
+```
+Вывод:
+1. Внутри объекта есть свойство `constructor`, т.к. он есть в прототипе этого объекта.
+2. `constructor` равен самой функции F (ссылка на него).
+3. _Свойства функции_ никак не связаны со _свойствами порождаемого им объекта_
+    * А вот _свойства прототипа функции_ связаны.
+    И эти свойства находятся внутри объектов, порождаемых этой функцией.
+
+__Изменение прототипа__
+```js
+function F() {}
+
+const obj1 = new F();
+
+F.prototype.color = 'green';
+
+const obj2 = new F();
+
+console.log(obj1.color); // green
+console.log(obj2.color); // green
+```
+
+__Определение класса__
+
+Повторим создание класса без использования самого класса, как это делалось раньше, до введения ES6
+
+```js
+function Node(name) {
+  this.name = name;
+}
+
+Node.prototype.getName = function getName() {
+  return this.name;
+};
+
+const obj = new Node('span');
+obj.getName(); // span
+```
+
+__Перекрытие (Overlap)__
+
+У прототипов есть одна особенность, которой нет в обычных языках у классов:
+
+При изменении свойства прототипа из текущего объекта, свойство самого прототипа не меняется. А создается локальное свойство у самого объекта.
+Этот механизм позволяет предотвратить опасные побочные эффекты.
+
+```js
+function F() {}
+F.prototype.color = 'green';
+
+const obj1 = new F();
+const obj2 = new F();
+
+obj2.color = 'red'; // изменили свойство объекта
+// Свойство прототипа не меняется
+
+console.log(obj1); // green
+console.log(obj2); // red
+console.log(F.prototype.color); // green
+```
