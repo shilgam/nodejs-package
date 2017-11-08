@@ -15,3 +15,9 @@ PairedTag.prototype.toString = function toString() {
     this.children.map(child => child.toString()).join('') : this.body;
   return `<${this.name}${this.getAttributesAsLine()}>${value}</${this.name}>`;
 };
+
+/* DEBUG */
+// const tag = new PairedTag('meta', { id: 'uniq-key' }, [
+//   ['title', 'hello, hexlet!'],
+// ]);
+// console.log(`> > > > > tag: ${tag}`);
