@@ -7,7 +7,7 @@ export default function PairedTag(name, attributes = {}, body = '', children = [
 }
 
 // BEGIN (write your solution here)
-
+PairedTag.prototype = Object.create(Node.prototype);
 // END
 
 PairedTag.prototype.toString = function toString() {

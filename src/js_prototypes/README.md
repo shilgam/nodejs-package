@@ -479,7 +479,6 @@ A.prototype.color; // green !!!  // меняется, т.к.
 // это один и тот же объект
 
 const obj = new B();
-
 Object.getPrototypeOf(obj) === A.prototype; // true
 // Мы не получили цепочку прототипов
 // В цепочке прототипов B() никак не участвует
@@ -501,21 +500,20 @@ A.prototype.color; // undefined
 const obj = new B();
 
 const proto1 = Object.getPrototypeOf(obj);
-
-console.log(proto1 === B.prototype); // true
+// B.prototype;
 
 const proto2 = Object.getPrototypeOf(proto1);
-
-proto2 === A.prototype; // true
+// A.prototype;
 ```
 
 __Oбъект на основе прототипа__
 
-Cоздаем фейковый конструктор, гарантированно не содержащий side effects.
+Реализуем самостоятельно функцию создания объекта на основе прототипа:
+
 ```js
 Object.create = function create(protoObj) {
-  function F() {}
-  F.prototype = protoObj;
+  function F() {}  // создаем фейковый конструктор (не содержит side effects)
+  F.prototype = protoObj; // устанавливаем прототип
   return new F();
 };
 
@@ -524,16 +522,21 @@ function B() {}
 
 B.prototype = Object.create(A.prototype);
 
-// wrong way
+// Wrong way
 B.prototype = new A();
-// причина - side effects
+// Q: Почему так не делают? A: side effects
 ```
 
 __Линковка__
 
 Линковка - еще один интересный аспект, отличающий js от других class-based языков.
-При вызове `new` происходит возврат нового объекта, который слинкован с прототипом функции.
-Вызов `new` это просто линковка.
+
+`new` в js не является именно порождающей операцией, создающей новый instance класса.
+В js все намного проще: в нем нет ничего, кроме примитивных типов и объектов.
+
+По факту: при вызове `new` возвращается новый объект, который, всего-навсего, слинкован с прототипом функции, переданым в `new`.
+
+Вызов `new` - это просто линковка:
 ```js
 function F() {}
 const obj1 = new F();
