@@ -57,19 +57,20 @@ class Tree {
   }
 
   removeChild(key) {
-    this.children.delete(key);
-    return this;
+    return this.children.delete(key);
   }
 
   getChildren() {
-    return [...this.children].map(elem => elem[1]);
+    return [...this.children.values()];
   }
 
   getDeepChild(keys) {
-    if ([...keys].length === 0) {
-      return undefined;
-    } return [...keys].reduce((accum, key) =>
-        ((accum === undefined) ? undefined : accum.getChild(key)), this);
+    const [key, ...rest] = keys;
+    const node = this.getChild(key);
+    if (rest.length === 0 || node === undefined) {
+      return node;
+    }
+    return node.getDeepChild(rest);
   }
 
   toString() {
