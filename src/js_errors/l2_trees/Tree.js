@@ -44,26 +44,85 @@ class Tree {
   }
 
   // BEGIN (write your solution here)
+  hasChildren() {
+    return (this.children.size > 0);
+  }
 
+  hasChild(key) {
+    return this.children.has(key);
+  }
+
+  getParent() {
+    return this.parent;
+  }
+
+  removeChild(key) {
+    this.children.delete(key);
+    return this;
+  }
+
+  getChildren() {
+    return [...this.children].map(elem => elem[1]);
+  }
+
+  getDeepChild(keys) {
+    if ([...keys].length === 0) {
+      return undefined;
+    } return [...keys].reduce((accum, key) =>
+        ((accum === undefined) ? undefined : accum.getChild(key)), this);
+  }
+
+  toString() {
+    return ` { "${this.key}", [${this.getChildren().map(node => node.toString())}] } `;
+  }
   // END
 }
 
 export default Tree;
 
 /* DEBUG */
-// tree = new Tree('/');
+// const tree = new Tree('/');
 // tree.addChild('var')
 //   .addChild('lib')
 //   .addChild('run');
 // tree.addChild('etc');
 // tree.addChild('home');
-//
-// // example: getDeepChild
+
+/* #toString */
+// console.log(`>>>>    tree: ${tree}`);
+
+/* #hasChildren */
+// console.log(tree.hasChildren()); // true
+// const emptyTree = new Tree('/');
+// console.log(emptyTree.hasChildren()); // false
+
+/* #hasChild */
+// console.log(tree.hasChild('/')); // false
+// console.log(tree.hasChild('etc')); // true
+
+/* #getParent */
+// const subtree = tree.getChild('var');
+// console.log(subtree.getParent()); // tree;
+
+/* #removeChild */
+// const subtree = tree.getChild('var');
+// console.log(subtree.hasChildren()); // true
+// if (subtree) {
+//   subtree.removeChild('lib');
+// }
+// console.log(subtree.hasChildren()); // false
+
+/* #getChildren */
+// const dirs = tree.getChildren().map(child => child.getKey());
+// console.log(dirs); // ['var', 'etc', 'home'])
+
+/* #getDeepChild */
 // const subtree = tree.getDeepChild(['var', 'lib']);
-// subtree.getKey(); // lib
-//
-// const parent = subtree.getParent();
-// parent.getKey(); // var
-//
-// tree.removeChild('home'); // true
-// tree.removeChild('nonexistentNode'); // false
+// console.log(subtree.getKey()); // lib
+
+/* #getDeepChild undefined */
+// const subtree = tree.getDeepChild(['var', 'lib', 'one', 'two']);
+// console.log(subtree); // undefined
+
+// const subtree02 = tree.getDeepChild([]);
+// console.log(subtree02); // undefined
