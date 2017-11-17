@@ -30,12 +30,8 @@ import Tree from 'hexlet-trees'; // eslint-disable-line
 */
 
 // BEGIN (write your solution here)
-const getPathParts = (filepath) => {
-  const normalized = path.normalize(filepath);
-  const arrayed = normalized.split(path.sep).filter(el => el !== '');
-  // console.log(`> > > spaceRem: ${arrayed.map(elem => `"${elem}"`)}`);
-  return arrayed;
-};
+const getPathParts = filepath =>
+  filepath.split(path.sep).filter(el => el !== '');
 // END
 
 export default class HexletFs {
@@ -50,9 +46,8 @@ export default class HexletFs {
   }
 
   mkdirSync(filepath) {
-    const dir = path.dirname(filepath);
-    const dirname = path.basename(filepath);
-    return this.findNode(dir).addChild(dirname, { type: 'dir' });
+    const { dir, base } = path.parse(filepath);
+    return this.findNode(dir).addChild(base, { type: 'dir' });
   }
 
   isFile(filepath) {
@@ -61,10 +56,8 @@ export default class HexletFs {
   }
 
   touchSync(filepath) {
-    const dir = path.dirname(filepath);
-    const filename = path.basename(filepath);
-    const current = this.findNode(dir);
-    return current.addChild(filename, { type: 'file' });
+    const { dir, base } = path.parse(filepath);
+    return this.findNode(dir).addChild(base, { type: 'file' });
   }
   // END
 
