@@ -23,19 +23,49 @@ import Tree from 'hexlet-trees'; // eslint-disable-line
 поиск файла (каталога) внутри текущего каталога.
 
 2. Для работы с путями используйте возможности встроенного в Node.js модуля Path
+
+3. DOCS:
+  * hexlet-trees: https://github.com/hexlet-components/js-trees/tree/master/docs
+  * path: https://nodejs.org/api/path.html
 */
 
 // BEGIN (write your solution here)
-
+const getPathParts = (filepath) => {
+  const normalized = path.normalize(filepath);
+  const arrayed = normalized.split(path.sep).filter(el => el !== '');
+  // console.log(`> > > spaceRem: ${arrayed.map(elem => `"${elem}"`)}`);
+  return arrayed;
+};
 // END
 
-export default class {
+export default class HexletFs {
   constructor() {
     this.tree = new Tree('/', { type: 'dir' });
   }
 
   // BEGIN (write your solution here)
+  isDirectory(filepath) {
+    const current = this.findNode(filepath);
+    return current && current.getMeta().type === 'dir';
+  }
 
+  mkdirSync(filepath) {
+    const dir = path.dirname(filepath);
+    const dirname = path.basename(filepath);
+    return this.findNode(dir).addChild(dirname, { type: 'dir' });
+  }
+
+  isFile(filepath) {
+    const current = this.findNode(filepath);
+    return current && current.getMeta().type === 'file';
+  }
+
+  touchSync(filepath) {
+    const dir = path.dirname(filepath);
+    const filename = path.basename(filepath);
+    const current = this.findNode(dir);
+    return current.addChild(filename, { type: 'file' });
+  }
   // END
 
   findNode(filepath) {
@@ -45,15 +75,14 @@ export default class {
 }
 
 /* DEBUG */
-// files.isDirectory('/etc'); // false
+// const files = new HexletFs();
 //
+// console.log(`isDirectory?  ${files.isDirectory('/etc')}`); // false
 // files.mkdirSync('/etc');
-// files.isDirectory('/etc'); // true
+// console.log(`isDirectory?  ${files.isDirectory('/etc')}`); // true
 //
 // files.mkdirSync('/etc/nginx');
-// files.isDirectory('/etc/nginx'); // true
+// console.log(`isDirectory?  ${files.isDirectory('/etc/nginx')}`); // true
 //
-// files.isFile('/file.txt'); // false
-//
-// files.touchSync('/file.txt');
-// files.isFile('/file.txt'); // true
+// files.touchSync('/etc/file.txt');
+// console.log(`isFile?  ${files.isFile('/etc/file.txt')}`); // true
