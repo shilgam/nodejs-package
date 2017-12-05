@@ -1,16 +1,15 @@
 import path from 'path';
 import Tree from 'hexlet-trees'; // eslint-disable-line
 
-// import Dir from './Dir';
-// import File from './File';
+import Dir from './Dir';
+import File from './File';
 
 const getPathParts = filepath =>
   filepath.split(path.sep).filter(part => part !== '');
 
 export default class HexletFs {
   constructor() {
-    // this.tree = new Tree('/', new Dir('/'));
-    this.tree = new Tree('/', { type: 'dir' });
+    this.tree = new Tree('/', new Dir('/'));
   }
 
   statSync(filepath) {
@@ -20,14 +19,12 @@ export default class HexletFs {
 
   touchSync(filepath) {
     const { dir, base } = path.parse(filepath);
-    // return this.findNode(dir).addChild(base, new File(base));
-    return this.findNode(dir).addChild(base, { type: 'file' });
+    return this.findNode(dir).addChild(base, new File(base));
   }
 
   mkdirSync(filepath) {
     const { dir, base } = path.parse(filepath);
-    // return this.findNode(dir).addChild(base, new Dir(base));
-    return this.findNode(dir).addChild(base, { type: 'dir' });
+    return this.findNode(dir).addChild(base, new Dir(base));
   }
 
   isDirectory(filepath) {
@@ -47,14 +44,7 @@ export default class HexletFs {
 }
 
 /* DEBUG */
-// const files = new HexletFs();
-//
-// console.log(`isDirectory?  ${files.isDirectory('/etc')}`); // false
-// files.mkdirSync('/etc');
-// console.log(`isDirectory?  ${files.isDirectory('/etc')}`); // true
-//
-// files.mkdirSync('/etc/nginx');
-// console.log(`isDirectory?  ${files.isDirectory('/etc/nginx')}`); // true
-//
-// files.touchSync('/etc/file.txt');
-// console.log(`isFile?  ${files.isFile('/etc/file.txt')}`); // true
+const files = new HexletFs();
+
+files.mkdirSync('/etc2');
+console.log(files.statSync('/etc2').isDirectory()); // true
