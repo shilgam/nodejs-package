@@ -2,8 +2,9 @@ import Stats from './Stats'; // eslint-disable-line
 
 // BEGIN (write your solution here)
 export default class Node {
-  constructor(name) {
+  constructor(name, type) {
     this.name = name;
+    this.stats = new Stats(type);
   }
 
   getName() {
@@ -11,12 +12,13 @@ export default class Node {
   }
 
   getStats() {
-    return new Stats(this.isFile(), this.isDirectory());
+    return this.stats;
   }
 }
 // END
 
 /* DEBUG */
 // const node = new Node('/');
-// console.log(`name: ${node.getName()}`);
-// console.log(`obj : ${JSON.stringify(node)}`);
+//
+// console.log(`name: ${node.getName()}`); // '/'
+// console.log(`obj : ${JSON.stringify(node)}`); // {"name":"/","stats":{}}

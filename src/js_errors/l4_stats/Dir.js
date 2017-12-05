@@ -3,19 +3,14 @@ import Node from './Node'; // eslint-disable-line
 
 // BEGIN (write your solution here)
 export default class Dir extends Node {
-  isDirectory() {
-    return true;
-  }
-  isFile() {
-    return false;
+  constructor(name) {
+    super(name, 'dir');
   }
 }
 // END
 
 /* DEBUG */
 // const myFSys = new Dir('/');
-
-// console.log(`object:     ${JSON.stringify(myFSys)}`);
+//
 // console.log(`name:       ${myFSys.getName()}`);
-// console.log(`isFile():   ${myFSys.isFile()}`); // true
-// console.log(`isDir():    ${myFSys.isDirectory()}`); // false
+// console.log(`object:     ${JSON.stringify(myFSys)}`); // {"name":"/","stats":{"type":"dir"}}

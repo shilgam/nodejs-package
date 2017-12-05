@@ -27,16 +27,6 @@ export default class HexletFs {
     return this.findNode(dir).addChild(base, new Dir(base));
   }
 
-  isDirectory(filepath) {
-    const current = this.findNode(filepath);
-    return current && current.getMeta().type === 'dir';
-  }
-
-  isFile(filepath) {
-    const current = this.findNode(filepath);
-    return current && current.getMeta().type === 'file';
-  }
-
   findNode(filepath) {
     const parts = getPathParts(filepath);
     return parts.length === 0 ? this.tree : this.tree.getDeepChild(parts);
@@ -44,7 +34,7 @@ export default class HexletFs {
 }
 
 /* DEBUG */
-const files = new HexletFs();
-
-files.mkdirSync('/etc2');
-console.log(files.statSync('/etc2').isDirectory()); // true
+// const files = new HexletFs();
+//
+// files.mkdirSync('/etc2');
+// console.log(files.statSync('/etc2').isDirectory()); // true

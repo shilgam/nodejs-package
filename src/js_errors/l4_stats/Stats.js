@@ -1,21 +1,24 @@
 // BEGIN (write your solution here)
 export default class Stats {
-  constructor(file, directory) {
-    this.file = file;
-    this.directory = directory;
+  constructor(type) {
+    this.type = type;
   }
 
   isFile() {
-    return this.file;
+    return this.type === 'file';
   }
 
   isDirectory() {
-    return this.directory;
+    return this.type === 'dir';
   }
 }
 // END
 
 /* DEBUG */
-// const myStat = new Stats('file', 'dir');
-// console.log(`file:   ${myStat.isFile()}`);
-// console.log(`dir :   ${myStat.isDirectory()}`);
+// const fileStat = new Stats('file');
+// console.log(fileStat.isFile()); // true
+// console.log(fileStat.isDirectory()); // false
+//
+// const dirStat = new Stats('dir');
+// console.log(dirStat.isFile()); // false
+// console.log(dirStat.isDirectory()); // true

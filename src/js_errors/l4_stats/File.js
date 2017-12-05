@@ -4,26 +4,17 @@ import Node from './Node'; // eslint-disable-line
 // BEGIN (write your solution here)
 export default class File extends Node {
   constructor(name, body) {
-    super(name);
+    super(name, 'file');
     this.body = body;
   }
   getBody() {
     return this.body;
   }
-
-  isDirectory() {
-    return false;
-  }
-
-  isFile() {
-    return true;
-  }
 }
 // END
 
 /* DEBUG */
-// const myFSys = new File('file1.txt');
+// const myFSys = new File('text.txt');
 //
-// console.log(`name:       ${myFSys.getName()}`);
-// console.log(`isFile():   ${myFSys.isFile()}`); // true
-// console.log(`isDir():    ${myFSys.isDirectory()}`); // false
+// console.log(`name: ${myFSys.getName()}`); // text.txt
+// console.log(`obj : ${JSON.stringify(myFSys)}`); // {"name":"text.txt","stats":{"type":"file"}}
