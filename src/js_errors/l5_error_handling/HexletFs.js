@@ -30,15 +30,14 @@ export default class HexletFs {
 
   // BEGIN (write your solution here)
   touchSync(filepath) {
-    const parts = getPathParts(filepath);
-    const parent = this.tree.getDeepChild(parts.slice(0, -1));
+    const { base, dir } = path.parse(filepath);
+    const parent = this.findNode(dir);
 
     if (!parent || !parent.getMeta().getStats().isDirectory()) {
       return false;
     }
 
-    const fileName = parts.slice(-1)[0];
-    parent.addChild(fileName, new File(fileName));
+    parent.addChild(base, new File(base));
     return true;
   }
 
@@ -63,25 +62,22 @@ export default class HexletFs {
   }
 
   readdirSync(dirPath) {
-    const parts = getPathParts(dirPath);
-    const child = parts.length === 0 ? this.tree : this.tree.getDeepChild(parts);
-
+    const child = this.findNode(dirPath);
     if (!child || !child.getMeta().getStats().isDirectory()) {
       return false;
     }
-    return child.getChildren().map(children => children.getMeta().name);
+    return child.getChildren()
+      .map(children => children.getMeta().getName());
   }
 
   rmdirSync(dirPath) {
-    const parts = getPathParts(dirPath);
-    const child = parts.length === 0 ? this.tree : this.tree.getDeepChild(parts);
+    const { base } = path.parse(dirPath);
+    const curr = this.findNode(dirPath);
 
-    if (!child || !child.getMeta().getStats().isDirectory() || child.getChildren().length !== 0) {
+    if (!curr || !curr.getMeta().getStats().isDirectory() || curr.getChildren().length !== 0) {
       return false;
     }
-    const parent = this.tree.getDeepChild(parts.slice(0, -1));
-    const fileName = parts.slice(-1)[0];
-    return parent.removeChild(fileName);
+    return curr.getParent().removeChild(base);
   }
   // END
 
