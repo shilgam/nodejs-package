@@ -55,3 +55,46 @@ __Типы ошибок:__
 
 * Эксплуатационные -- ошибки времени выполнения, возникающие в корректных программах
 * Ошибки программирования -- баги в программе
+
+## Lesson 6: Коды ошибок
+
+Ошибок файловой системы: более 100 (UNIX)
+
+__Как возвращать результат?__
+
+```js
+const result = files.rmdir(path);
+
+if ([/* error list */]).includes(result)) {
+  // errors
+} else {
+  // success
+}
+```
+
+* C style
+Использование глобальной переменной
+
+* Golang style (C style +)
+Не используем глобальные переменные
+```go
+func main() {
+  dat, err := ioutil.ReadFile("/tmp/dat")
+  if e != nil {
+    fmt.Println(err.Error())
+  }
+  fmt.Print(string(dat))
+}
+```
+
+In JS (destructuring)
+```js
+const [data, err] = files.readFileSync('/unknown');
+if (err === null) {
+  // do smth with data
+} else {
+  // handle error
+}
+
+// return [null, errors.code.ENOENT];
+```
