@@ -6,7 +6,7 @@ import { Dir, File } from 'hexlet-fs'; // eslint-disable-line
 const getPathParts = filepath =>
   filepath.split(path.sep).filter(part => part !== '');
 
-export default class {
+export default class HexletFs {
   constructor() {
     this.tree = new Tree('/', new Dir('/'));
   }
@@ -20,7 +20,46 @@ export default class {
   }
 
   // BEGIN (write your solution here)
+  writeFileSync(filepath, content) {
+    const { base, dir } = path.parse(filepath);
+    const parent = this.findNode(dir);
 
+    if (!parent) {
+      return [null, errors.code.ENOENT];
+    }
+    const child = parent.getChild(base);
+
+    if (child && child.getMeta().isDirectory()) {
+      return [null, errors.code.EISDIR];
+    }
+    return [parent.addChild(base, new File(base, content)), null];
+  }
+
+  readFileSync(filepath) {
+    const current = this.findNode(filepath);
+
+    if (!current) {
+      return [null, errors.code.ENOENT];
+    }
+    if (current.getMeta().isDirectory()) {
+      return [null, errors.code.EISDIR];
+    }
+    return [current.getMeta().getBody(), null];
+  }
+
+  unlinkSync(filepath) {
+    const { base, dir } = path.parse(filepath);
+    const parent = this.findNode(dir);
+    const child = parent.getChild(base);
+
+    if (!child) {
+      return [null, errors.code.ENOENT];
+    }
+    if (child.getMeta().isDirectory()) {
+      return [null, errors.code.EPERM];
+    }
+    return parent.removeChild(base);
+  }
   // END
 
   mkdirpSync(filepath) {
@@ -70,3 +109,35 @@ export default class {
     return parts.length === 0 ? this.tree : this.tree.getDeepChild(parts);
   }
 }
+/* DEBUG */
+// const files = new HexletFs();
+// files.mkdirpSync('/etc');
+// files.mkdirpSync('/opt');
+// files.touchSync('/opt/file.txt');
+// files.mkdirpSync('/etc/nginx/conf.d');
+
+/* #writeFileSync */
+// const [data, err] = files.writeFileSync('/etc/unknown/file', 'body');
+// console.log(data); // null
+// console.log(err.code); // 'ENOENT'
+
+// const [data2, err2] = files.writeFileSync('/etc', 'body');
+// console.log(data2); // null
+// console.log(err2.code); // 'EISDIR'
+
+/* #readFileSync */
+// files.writeFileSync('/etc/nginx/nginx.conf', 'directives');
+// const [data, err] = files.readFileSync('/etc/nginx/nginx.conf');
+// console.log(`output: ${data}`); // 'directives'
+// console.log(`output: ${err}`); // null
+
+/* #unlinkSync */
+// files.writeFileSync('/etc/nginx/nginx.conf', 'directives');
+// files.unlinkSync('/etc/nginx/nginx.conf');
+// const [data, err] = files.readdirSync('/etc/nginx');
+// console.log(err); // null
+// console.log(data); // ['conf.d']
+//
+// const [data2, err2] = files.unlinkSync('/etc/nginx');
+// console.log(data2); // null
+// console.log(err2.code); // 'EPERM'
