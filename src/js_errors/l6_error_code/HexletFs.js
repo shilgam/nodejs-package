@@ -48,17 +48,15 @@ export default class HexletFs {
   }
 
   unlinkSync(filepath) {
-    const { base, dir } = path.parse(filepath);
-    const parent = this.findNode(dir);
-    const child = parent.getChild(base);
+    const current = this.findNode(filepath);
 
-    if (!child) {
+    if (!current) {
       return [null, errors.code.ENOENT];
     }
-    if (child.getMeta().isDirectory()) {
+    if (current.getMeta().isDirectory()) {
       return [null, errors.code.EPERM];
     }
-    return parent.removeChild(base);
+    return [current.getParent().removeChild(current.getKey()), null];
   }
   // END
 
