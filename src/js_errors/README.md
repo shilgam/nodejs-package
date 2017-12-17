@@ -98,3 +98,57 @@ if (err === null) {
 
 // return [null, errors.code.ENOENT];
 ```
+
+## Lesson 7: Исключения
+Исключения - мощный механизм для работы с ошибками в современных ЯП.
+
+__Стек__ - стопка тарелок
+
+Стек ошибки - результат вызовов
+
+__Исключительная ситуация__
+
+Def: Исключительная ситуация - критическая ошибка, после которого невозможно восстановление.
+
+
+Синтаксис исключения в js:
+```js
+const g = () => undefinedFunc();
+const f = () => g(); // внутри f() нет никакой обработки ошибок
+
+try {
+  f();
+} catch (e) {
+  console.log(e);
+}
+// ReferenceError: undefinedFunc is not defined
+// at g (main.js:1:11)
+// at f (main.js:2:17)
+// at Object.<anonymous> (main.js:5:3)
+// >> стек в обратном порядке
+```
+
+Исключения пробрасываются на самый верх до блока try-catch
+
+* Этот код позволяет сократить неодходимость обработки вложенных вызовов
+
+__Возбуждение исключения:__
+Как возбуждать/кидать исключения?
+```js
+// const obj = new Error(message);
+// throw obj;
+
+statsSync(path) {
+  const parts = getPathParts(path);
+  const current = this.tree.getDeepChild(parts);
+  if (!current) {
+    const error = errors.code.ENOENT;
+    throw new HexletFsError(error, path);
+  }
+  return current.getMeta().getStats();
+}
+```
+
+__Эмпиричекое правило__
+
+Нужно бросать исключение тогда, когда ваша функция неспособна выполнить то, что она обещает. -- Jeff Richter
