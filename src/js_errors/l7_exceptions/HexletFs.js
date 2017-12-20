@@ -8,7 +8,7 @@ import HexletFsError from './HexletFsError';
 const getPathParts = filepath =>
   filepath.split(path.sep).filter(part => part !== '');
 
-export default class {
+export default class HexletFs {
   constructor() {
     this.tree = new Tree('/', new Dir('/'));
   }
@@ -22,7 +22,16 @@ export default class {
   }
 
   // BEGIN (write your solution here)
-
+  copySync(src, dest) {
+    const data = this.readFileSync(src);
+    const destNode = this.findNode(dest);
+    if (destNode && destNode.getMeta().isDirectory()) {
+      const { base } = path.parse(src);
+      const fullDest = path.join(dest, base);
+      return this.writeFileSync(fullDest, data);
+    }
+    return this.writeFileSync(dest, data);
+  }
   // END
 
   writeFileSync(filepath, body) {
@@ -80,3 +89,9 @@ export default class {
     return parts.length === 0 ? this.tree : this.tree.getDeepChild(parts);
   }
 }
+
+/* DEBUG */
+// const files = new HexletFs();
+// files.mkdirpSync('/etc');
+// files.copySync('undefined', '/etc'); // .toThrow(/ENOENT/);
+// /* TODO: Why tests are failing when code above is available??? */
