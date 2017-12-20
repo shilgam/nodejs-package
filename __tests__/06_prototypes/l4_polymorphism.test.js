@@ -1,6 +1,6 @@
-import parse from '../../src/js_prototypes/l4_polymorphism/solution';
-import PairedTag from '../../src/js_prototypes/l4_polymorphism/PairedTag';
-import SingleTag from '../../src/js_prototypes/l4_polymorphism/SingleTag';
+import parse from '../../src/06_prototypes/l4_polymorphism/solution';
+import PairedTag from '../../src/06_prototypes/l4_polymorphism/PairedTag';
+import SingleTag from '../../src/06_prototypes/l4_polymorphism/SingleTag';
 
 describe('HtmlBuilder', () => {
   it('#parse', () => {

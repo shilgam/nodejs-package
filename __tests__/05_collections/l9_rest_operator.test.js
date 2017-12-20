@@ -1,4 +1,4 @@
-import Enumerable from '../../src/js_collections/l9_rest_operator';
+import Enumerable from '../../src/05_collections/l9_rest_operator';
 
 describe('HexletLinq', () => {
   let coll;

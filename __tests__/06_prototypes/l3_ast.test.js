@@ -1,4 +1,4 @@
-import { render, parse } from '../../src/js_prototypes/l3_ast';
+import { render, parse } from '../../src/06_prototypes/l3_ast';
 
 describe('HtmlBuilder', () => {
   it('set 1', () => {

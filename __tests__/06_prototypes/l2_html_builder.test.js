@@ -1,4 +1,4 @@
-import buildHtml from '../../src/js_prototypes/l2_html_builder';
+import buildHtml from '../../src/06_prototypes/l2_html_builder';
 
 describe('HtmlBuilder', () => {
   it('set 1', () => {

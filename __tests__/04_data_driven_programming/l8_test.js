@@ -1,7 +1,7 @@
 import { l, length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import SimpleCard from '../../src/js_data_driven_programming/l8_classes/SimpleCard'; // eslint-disable-line
-import PercentCard from '../../src/js_data_driven_programming/l8_classes/PercentCard'; // eslint-disable-line
-import make from '../../src/js_data_driven_programming/l8_classes/solution'; // eslint-disable-line
+import SimpleCard from '../../src/04_data_driven_programming/l8_classes/SimpleCard'; // eslint-disable-line
+import PercentCard from '../../src/04_data_driven_programming/l8_classes/PercentCard'; // eslint-disable-line
+import make from '../../src/04_data_driven_programming/l8_classes/solution'; // eslint-disable-line
 
 describe('CardGame', () => {
   it('#flow 1', () => {

@@ -1,6 +1,6 @@
 import { l, toString } from 'hexlet-pairs-data'; // eslint-disable-line
-import { make } from '../../src/js_data_driven_programming/l9_extract/tags';
-import extract from '../../src/js_data_driven_programming/l9_extract/extract';
+import { make } from '../../src/04_data_driven_programming/l9_extract/tags';
+import extract from '../../src/04_data_driven_programming/l9_extract/extract';
 
 test('extract 1', () => {
   expect(extract(l())).toBe(l());

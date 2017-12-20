@@ -1,5 +1,5 @@
-import parse from '../../src/js_prototypes/l6_inheritance/solution';
-import buildNode from '../../src/js_prototypes/l6_inheritance/buildNode';
+import parse from '../../src/06_prototypes/l6_inheritance/solution';
+import buildNode from '../../src/06_prototypes/l6_inheritance/buildNode';
 
 describe('HtmlBuilder', () => {
   it('#parse', () => {

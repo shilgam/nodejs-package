@@ -1,4 +1,4 @@
-import magic from '../../src/js_prototypes/l7_functions_as_objects/magic';
+import magic from '../../src/06_prototypes/l7_functions_as_objects/magic';
 
 test('magic', () => {
   expect(magic() + 0).toBe(0);

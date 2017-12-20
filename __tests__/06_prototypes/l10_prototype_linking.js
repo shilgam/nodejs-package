@@ -1,5 +1,5 @@
-import parse from '../../src/js_prototypes/l10_prototype_linking/solution';
-import buildNode from '../../src/js_prototypes/l10_prototype_linking/buildNode';
+import parse from '../../src/06_prototypes/l10_prototype_linking/solution';
+import buildNode from '../../src/06_prototypes/l10_prototype_linking/buildNode';
 
 describe('HtmlBuilder', () => {
   it('#parse', () => {

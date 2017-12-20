@@ -1,4 +1,4 @@
-import { wordsCount } from '../../src/js_collections/l3_map';
+import { wordsCount } from '../../src/05_collections/l3_map';
 
 const stopWords = ['and', 'or', 'a', 'the', ''];
 const data = [

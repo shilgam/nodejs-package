@@ -1,4 +1,4 @@
-import Enumerable from '../../src/js_collections/l8_memorize';
+import Enumerable from '../../src/05_collections/l8_memorize';
 
 describe('HexletLinq', () => {
   let coll;

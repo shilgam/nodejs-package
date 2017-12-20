@@ -1,4 +1,4 @@
-import difference from '../../src/js_collections/l4_set';
+import difference from '../../src/05_collections/l4_set';
 
 test('solution', () => {
   const result1 = difference(new Set([2, 1]), new Set([2, 3]));

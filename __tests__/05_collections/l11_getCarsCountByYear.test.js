@@ -1,4 +1,4 @@
-import getCarsCountByYear from '../../src/js_collections/l11_getCarsCountByYear';
+import getCarsCountByYear from '../../src/05_collections/l11_getCarsCountByYear';
 
 const cars = [
   { brand: 'bmw', model: 'm5', year: 2014 },

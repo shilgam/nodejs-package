@@ -1,5 +1,5 @@
-import parse from '../../src/js_prototypes/l8_late_binding/solution';
-import buildNode from '../../src/js_prototypes/l8_late_binding/buildNode';
+import parse from '../../src/06_prototypes/l8_late_binding/solution';
+import buildNode from '../../src/06_prototypes/l8_late_binding/buildNode';
 
 describe('HtmlBuilder', () => {
   it('#parse', () => {

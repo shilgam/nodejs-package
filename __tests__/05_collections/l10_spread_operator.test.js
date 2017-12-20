@@ -1,4 +1,4 @@
-import objectify from '../../src/js_collections/l10_spread_operator';
+import objectify from '../../src/05_collections/l10_spread_operator';
 
 const cars = [
   { id: 1, brand: 'bmw', model: 'm5', year: 2014 },

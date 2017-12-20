@@ -1,7 +1,7 @@
 import { car, cons, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
 // function get: `get(index, list)`
 import { l, length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import make from '../../src/js_data_driven_programming/l3_invert'; // eslint-disable-line
+import make from '../../src/04_data_driven_programming/l3_invert'; // eslint-disable-line
 
 test('CardGame', () => {
   let cardIndex = 2;

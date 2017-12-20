@@ -1,4 +1,4 @@
-import Enumerable from '../../src/js_collections/l6_immutable';
+import Enumerable from '../../src/05_collections/l6_immutable';
 
 describe('HexletLinq', () => {
   let coll;

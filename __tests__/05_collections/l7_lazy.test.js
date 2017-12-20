@@ -1,4 +1,4 @@
-import Enumerable from '../../src/js_collections/l7_lazy';
+import Enumerable from '../../src/05_collections/l7_lazy';
 
 describe('HexletLinq', () => {
   let coll;

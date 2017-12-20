@@ -1,4 +1,4 @@
-import HexletFs from '../../src/js_errors/l5_error_handling/HexletFs';
+import HexletFs from '../../src/07_errors/l5_error_handling/HexletFs';
 
 describe('FS', () => {
   let files;

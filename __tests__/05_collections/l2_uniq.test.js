@@ -1,4 +1,4 @@
-import uniq from '../../src/js_collections/l2_array';
+import uniq from '../../src/05_collections/l2_array';
 
 test('uniq', () => {
   expect(uniq([])).toEqual([]);

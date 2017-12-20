@@ -1,4 +1,4 @@
-import Tree from '../../src/js_errors/l2_trees/Tree';
+import Tree from '../../src/07_errors/l2_trees/Tree';
 
 describe('Tree', () => {
   let tree;

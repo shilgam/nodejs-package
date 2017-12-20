@@ -1,8 +1,8 @@
 import { car, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
 import { l, length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import simpleCard from '../../src/js_data_driven_programming/l6_objects/simpleCard'; // eslint-disable-line
-import percentCard from '../../src/js_data_driven_programming/l6_objects/percentCard'; // eslint-disable-line
-import make from '../../src/js_data_driven_programming/l6_objects/solution'; // eslint-disable-line
+import simpleCard from '../../src/04_data_driven_programming/l6_objects/simpleCard'; // eslint-disable-line
+import percentCard from '../../src/04_data_driven_programming/l6_objects/percentCard'; // eslint-disable-line
+import make from '../../src/04_data_driven_programming/l6_objects/solution'; // eslint-disable-line
 
 describe('CardGame', () => {
   it('#flow 1', () => {
