@@ -72,7 +72,7 @@ export default (text) => {
         break;
 
       default:
-        console.log('> default case');
+        throw new Error(`Unexpected state '${state}'`);
     }
   }
   return result;
