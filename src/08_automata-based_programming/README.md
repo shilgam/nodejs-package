@@ -92,3 +92,7 @@ export default (str) => {
   return result;
 };
 ```
+
+## Lesson 5: Паттерн state
+
+Смотри в README c заданием
