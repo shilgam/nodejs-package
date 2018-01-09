@@ -92,3 +92,7 @@ export default (str) => {
   return result;
 };
 ```
+
+## Lesson 6: Паттерн State Machine
+
+Смотри в README c заданием
