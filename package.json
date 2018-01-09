@@ -36,6 +36,7 @@
     "hexlet-pairs-data": "*",
     "hexlet-points": "*",
     "hexlet-trees": "^0.5.5",
+    "javascript-state-machine": "^3.0.1",
     "jest-cli": "^21.2.1"
   },
   "devDependencies": {
