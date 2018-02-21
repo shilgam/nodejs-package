@@ -1,0 +1,17 @@
+{
+    "someParam" : "someValue",
+    "data": [
+        {
+            "id": "1",
+            "value": "One"
+        },
+        {
+            "id": "2",
+            "value": "Two"
+        },
+        {
+            "id": "3",
+            "value": "Three"
+        }
+    ]
+}
