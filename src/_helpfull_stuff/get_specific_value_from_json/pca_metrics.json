@@ -1,0 +1,2298 @@
+{
+    "kpi_pca_metrics": {
+        "stat_date": "2017-11-11",
+        "campaign_id": 22191,
+        "visit_metrics": {
+            "_all_": {
+                "post_exposure_visits": 811,
+                "unexposed_visit_rate": 0.538827865,
+                "total_unique_users_reached": 71169,
+                "online_unique_users_reached": 35859,
+                "mapp_unique_users_reached": 26674,
+                "time_to_1st_visit": [
+                    {
+                        "number_of_days": 0,
+                        "perc_of_visits": 45.08
+                    },
+                    {
+                        "number_of_days": 1,
+                        "perc_of_visits": 34.18
+                    },
+                    {
+                        "number_of_days": 2,
+                        "perc_of_visits": 19.68
+                    },
+                    {
+                        "number_of_days": 3,
+                        "perc_of_visits": 1.06
+                    }
+                ],
+                "mweb_unique_users_reached": 23782,
+                "exposed_visit_rate": 0.551848512,
+                "visit_rate_lift_delta": 0.013020647,
+                "total_visits_projected": 12527,
+                "exposed_visits": 1224,
+                "impressions": 2826066,
+                "visit_rate_lift_percent_change": 0.0241647617834
+            },
+            "dimensions": {
+                "audience:mx": {
+                    "impressions": 600,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 78,
+                    "exposed_visits": 10
+                },
+                "publisher:nonmoverhomeownerinmarketpktr3l": {
+                    "impressions": 3498,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 3
+                },
+                "publisher:prefersmsng": {
+                    "impressions": 12638,
+                    "post_exposure_visits": 14,
+                    "total_visits_projected": 223,
+                    "exposed_visits": 17
+                },
+                "publisher:contentpksx93": {
+                    "impressions": 982,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:nonmoverhomeownerinmarketpktr3d": {
+                    "impressions": 4034,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:nonmoverhomeownerinmarketpktr3g": {
+                    "impressions": 394,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "iol:av": {
+                    "impressions": 554,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 78,
+                    "exposed_visits": 10
+                },
+                "publisher:kitcartpkv9dl": {
+                    "impressions": 444,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:nonmoverhomeownerinmarketpktr3h": {
+                    "impressions": 480,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 2
+                },
+                "publisher:audiohqaudio11/8": {
+                    "impressions": 2642,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:lbmcontentpkv9fv": {
+                    "impressions": 430,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 33,
+                    "exposed_visits": 3
+                },
+                "publisher:newmoverspktxf2": {
+                    "impressions": 6640,
+                    "post_exposure_visits": 24,
+                    "total_visits_projected": 378,
+                    "exposed_visits": 25
+                },
+                "publisher:holidaycart": {
+                    "impressions": 8604,
+                    "post_exposure_visits": 18,
+                    "total_visits_projected": 265,
+                    "exposed_visits": 29
+                },
+                "publisher:demo": {
+                    "impressions": 54300,
+                    "post_exposure_visits": 48,
+                    "total_visits_projected": 765,
+                    "exposed_visits": 79
+                },
+                "publisher:preferkobaltpkrtb2": {
+                    "impressions": 308,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "channel:abc": {
+                    "impressions": 540,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "audience:1p": {
+                    "impressions": 103814,
+                    "post_exposure_visits": 88,
+                    "total_visits_projected": 1327,
+                    "exposed_visits": 132
+                },
+                "publisher:parentxmaspktsm9": {
+                    "impressions": 420,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:holidaycontentpkv9hy": {
+                    "impressions": 194,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:cartpkrtbm": {
+                    "impressions": 112,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 1
+                },
+                "publisher:lbmcartpkv9fz": {
+                    "impressions": 288,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:lbmcartpkv9fy": {
+                    "impressions": 558,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "publisher:premover": {
+                    "impressions": 40668,
+                    "post_exposure_visits": 25,
+                    "total_visits_projected": 399,
+                    "exposed_visits": 42
+                },
+                "publisher:newmovers": {
+                    "impressions": 66200,
+                    "post_exposure_visits": 186,
+                    "total_visits_projected": 2860,
+                    "exposed_visits": 199
+                },
+                "publisher:inmarketpktw48": {
+                    "impressions": 1114,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 64,
+                    "exposed_visits": 6
+                },
+                "publisher:inmarketpktw47": {
+                    "impressions": 2160,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 22,
+                    "exposed_visits": 1
+                },
+                "publisher:inmarketpktw46": {
+                    "impressions": 3620,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 65,
+                    "exposed_visits": 7
+                },
+                "publisher:inmarketpktw45": {
+                    "impressions": 35640,
+                    "post_exposure_visits": 22,
+                    "total_visits_projected": 350,
+                    "exposed_visits": 29
+                },
+                "publisher:inmarketpktw44": {
+                    "impressions": 14632,
+                    "post_exposure_visits": 7,
+                    "total_visits_projected": 114,
+                    "exposed_visits": 11
+                },
+                "publisher:facebookpkzt43": {
+                    "impressions": 554,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 78,
+                    "exposed_visits": 10
+                },
+                "publisher:cartpkxvty": {
+                    "impressions": 672,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "channel:netming": {
+                    "impressions": 918186,
+                    "post_exposure_visits": 168,
+                    "total_visits_projected": 2560,
+                    "exposed_visits": 287
+                },
+                "publisher:contentpkxvv4": {
+                    "impressions": 634,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpkxvv7": {
+                    "impressions": 528,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:mlwcartpkv9gq": {
+                    "impressions": 92,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:mlwcartpkv9gs": {
+                    "impressions": 168,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:contentpkxvv8": {
+                    "impressions": 1038,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 28,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpl0cvh": {
+                    "impressions": 1204,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 50,
+                    "exposed_visits": 3
+                },
+                "publisher:cartpl0cvk": {
+                    "impressions": 1914,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpl0cvj": {
+                    "impressions": 1718,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpl0cvd": {
+                    "impressions": 3390,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 4
+                },
+                "publisher:cartpl0cvf": {
+                    "impressions": 1924,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 4
+                },
+                "publisher:contentpkzkbn": {
+                    "impressions": 564,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:audiohqbanner11/8": {
+                    "impressions": 936,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:tatpurchasepkv7b7": {
+                    "impressions": 336,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 10,
+                    "exposed_visits": 1
+                },
+                "publisher:tatpurchasepkv7b5": {
+                    "impressions": 2712,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 5
+                },
+                "publisher:inmarketpktw4b": {
+                    "impressions": 5090,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 62,
+                    "exposed_visits": 6
+                },
+                "publisher:tatpurchasepkv7b8": {
+                    "impressions": 260,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpkzkbr": {
+                    "impressions": 948,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpkzkbp": {
+                    "impressions": 546,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpkzkbq": {
+                    "impressions": 278,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:opecontent": {
+                    "impressions": 11260,
+                    "post_exposure_visits": 24,
+                    "total_visits_projected": 360,
+                    "exposed_visits": 36
+                },
+                "publisher:preferelx": {
+                    "impressions": 4326,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "inv_type:mapp": {
+                    "impressions": 443310,
+                    "post_exposure_visits": 429,
+                    "total_visits_projected": 6600,
+                    "exposed_visits": 606
+                },
+                "publisher:tahcontentpkv9jf": {
+                    "impressions": 514,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:tahcontentpkv9jk": {
+                    "impressions": 486,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:tahcontentpkv9jm": {
+                    "impressions": 144,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "channel:pandora": {
+                    "impressions": 9974,
+                    "post_exposure_visits": 9,
+                    "total_visits_projected": 129,
+                    "exposed_visits": 11
+                },
+                "publisher:womenholiday": {
+                    "impressions": 7292,
+                    "post_exposure_visits": 12,
+                    "total_visits_projected": 188,
+                    "exposed_visits": 16
+                },
+                "Dart Ad ID:hol": {
+                    "impressions": 287166,
+                    "post_exposure_visits": 147,
+                    "total_visits_projected": 2298,
+                    "exposed_visits": 215
+                },
+                "publisher:premoverspktv37": {
+                    "impressions": 2518,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 3
+                },
+                "publisher:mlwcontent": {
+                    "impressions": 5580,
+                    "post_exposure_visits": 10,
+                    "total_visits_projected": 151,
+                    "exposed_visits": 13
+                },
+                "publisher:purchasepkxvtr": {
+                    "impressions": 352,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepkxvtq": {
+                    "impressions": 572,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 4
+                },
+                "creative:dir": {
+                    "impressions": 677542,
+                    "post_exposure_visits": 159,
+                    "total_visits_projected": 2420,
+                    "exposed_visits": 251
+                },
+                "publisher:holidaycartpkv9j3": {
+                    "impressions": 296,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "publisher:holidaycartpkv9j2": {
+                    "impressions": 128,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:proacpmppktxfb": {
+                    "impressions": 200,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "Dart Ad ID:socialvf": {
+                    "impressions": 554,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 78,
+                    "exposed_visits": 10
+                },
+                "publisher:inmktpl0cv1": {
+                    "impressions": 11638,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 84,
+                    "exposed_visits": 7
+                },
+                "publisher:inmktpl0cv0": {
+                    "impressions": 4560,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 3
+                },
+                "publisher:inmktpl0cv3": {
+                    "impressions": 7230,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 2
+                },
+                "publisher:inmktpl0cv2": {
+                    "impressions": 1470,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "publisher:inmktpl0cv5": {
+                    "impressions": 6776,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 63,
+                    "exposed_visits": 8
+                },
+                "publisher:womenholidaypktsm0": {
+                    "impressions": 930,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 2
+                },
+                "publisher:preferpkvcy7": {
+                    "impressions": 212,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:tahcartpkv9jt": {
+                    "impressions": 298,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "channel:audiohq": {
+                    "impressions": 6004,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 2
+                },
+                "publisher:tahcartpkv9js": {
+                    "impressions": 190,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 33,
+                    "exposed_visits": 4
+                },
+                "publisher:tahcartpkv9jn": {
+                    "impressions": 570,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:kitcart": {
+                    "impressions": 9886,
+                    "post_exposure_visits": 14,
+                    "total_visits_projected": 203,
+                    "exposed_visits": 21
+                },
+                "publisher:inmktapppkthsp": {
+                    "impressions": 2764,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:womenholidaypktsmh": {
+                    "impressions": 728,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:inmktapppkthsn": {
+                    "impressions": 954,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 2
+                },
+                "audience:rt": {
+                    "impressions": 918186,
+                    "post_exposure_visits": 168,
+                    "total_visits_projected": 2560,
+                    "exposed_visits": 287
+                },
+                "publisher:tahcart": {
+                    "impressions": 9652,
+                    "post_exposure_visits": 12,
+                    "total_visits_projected": 184,
+                    "exposed_visits": 24
+                },
+                "publisher:nonmovernopurchasepktv31": {
+                    "impressions": 3172,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 5
+                },
+                "publisher:lbmcart": {
+                    "impressions": 11278,
+                    "post_exposure_visits": 22,
+                    "total_visits_projected": 323,
+                    "exposed_visits": 38
+                },
+                "Dart Ad ID:prblkobalt": {
+                    "impressions": 77296,
+                    "post_exposure_visits": 62,
+                    "total_visits_projected": 950,
+                    "exposed_visits": 76
+                },
+                "publisher:proacpmp": {
+                    "impressions": 462,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpksx94": {
+                    "impressions": 1968,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 45,
+                    "exposed_visits": 3
+                },
+                "Dart Ad ID:prime": {
+                    "impressions": 1022,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpksx96": {
+                    "impressions": 96,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 2
+                },
+                "publisher:preferlg": {
+                    "impressions": 42078,
+                    "post_exposure_visits": 23,
+                    "total_visits_projected": 360,
+                    "exposed_visits": 31
+                },
+                "publisher:preferpkvcyd": {
+                    "impressions": 292,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:preferpkvcyb": {
+                    "impressions": 1502,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 4
+                },
+                "agency:None": {
+                    "impressions": 2826066,
+                    "post_exposure_visits": 811,
+                    "total_visits_projected": 12527,
+                    "exposed_visits": 1224
+                },
+                "publisher:contentpksjsn": {
+                    "impressions": 472,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 4
+                },
+                "publisher:contentpksjsm": {
+                    "impressions": 462,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpksjsl": {
+                    "impressions": 292,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpksjsj": {
+                    "impressions": 748,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:contentpksx8z": {
+                    "impressions": 768,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpksjsh": {
+                    "impressions": 1042,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "audience:2p": {
+                    "impressions": 15978,
+                    "post_exposure_visits": 10,
+                    "total_visits_projected": 143,
+                    "exposed_visits": 13
+                },
+                "publisher:preferge": {
+                    "impressions": 1794,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 48,
+                    "exposed_visits": 3
+                },
+                "publisher:postmovershomeownerspktv34": {
+                    "impressions": 2594,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 27,
+                    "exposed_visits": 3
+                },
+                "publisher:tatpurchasepkvn5l": {
+                    "impressions": 352,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:flrcontentpkv9cs": {
+                    "impressions": 314,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:flrcontentpkv9cp": {
+                    "impressions": 612,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:flrcontentpkv9ct": {
+                    "impressions": 580,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:inmarketacpmp": {
+                    "impressions": 638,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 2
+                },
+                "publisher:contentpkrtbf": {
+                    "impressions": 72,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:lbmcartpkv9g1": {
+                    "impressions": 268,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:mover": {
+                    "impressions": 4868,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 61,
+                    "exposed_visits": 8
+                },
+                "publisher:inmarket": {
+                    "impressions": 29730,
+                    "post_exposure_visits": 45,
+                    "total_visits_projected": 709,
+                    "exposed_visits": 63
+                },
+                "Dart Ad ID:whrvetday": {
+                    "impressions": 178210,
+                    "post_exposure_visits": 116,
+                    "total_visits_projected": 1769,
+                    "exposed_visits": 161
+                },
+                "publisher:rpecartpkv9kg": {
+                    "impressions": 370,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 3
+                },
+                "iol:pm": {
+                    "impressions": 939866,
+                    "post_exposure_visits": 549,
+                    "total_visits_projected": 8479,
+                    "exposed_visits": 784
+                },
+                "publisher:vidq4ad2549prime15pjyrpz": {
+                    "impressions": 540,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:lbmcontent": {
+                    "impressions": 10282,
+                    "post_exposure_visits": 14,
+                    "total_visits_projected": 213,
+                    "exposed_visits": 22
+                },
+                "publisher:purchasepksjt1": {
+                    "impressions": 598,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:womenholidaypktw3y": {
+                    "impressions": 18998,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 100,
+                    "exposed_visits": 14
+                },
+                "publisher:womenholidaypktw3x": {
+                    "impressions": 15888,
+                    "post_exposure_visits": 8,
+                    "total_visits_projected": 117,
+                    "exposed_visits": 10
+                },
+                "publisher:womenholidaypktw3z": {
+                    "impressions": 3718,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 44,
+                    "exposed_visits": 5
+                },
+                "publisher:moverpktw3t": {
+                    "impressions": 2470,
+                    "post_exposure_visits": 10,
+                    "total_visits_projected": 154,
+                    "exposed_visits": 11
+                },
+                "publisher:moverpktw3w": {
+                    "impressions": 5662,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 92,
+                    "exposed_visits": 8
+                },
+                "publisher:moverpktw3q": {
+                    "impressions": 28260,
+                    "post_exposure_visits": 15,
+                    "total_visits_projected": 232,
+                    "exposed_visits": 21
+                },
+                "publisher:moverpktw3p": {
+                    "impressions": 31058,
+                    "post_exposure_visits": 16,
+                    "total_visits_projected": 255,
+                    "exposed_visits": 20
+                },
+                "publisher:moverpktw3s": {
+                    "impressions": 2764,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 54,
+                    "exposed_visits": 3
+                },
+                "publisher:homeowners": {
+                    "impressions": 1862,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 59,
+                    "exposed_visits": 4
+                },
+                "publisher:moverpktsmd": {
+                    "impressions": 428,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:homerent": {
+                    "impressions": 206800,
+                    "post_exposure_visits": 148,
+                    "total_visits_projected": 2332,
+                    "exposed_visits": 233
+                },
+                "publisher:pros": {
+                    "impressions": 11896,
+                    "post_exposure_visits": 11,
+                    "total_visits_projected": 168,
+                    "exposed_visits": 16
+                },
+                "publisher:nonmoverhomeownerinmarket": {
+                    "impressions": 50626,
+                    "post_exposure_visits": 37,
+                    "total_visits_projected": 578,
+                    "exposed_visits": 58
+                },
+                "site:tah": {
+                    "impressions": 481520,
+                    "post_exposure_visits": 433,
+                    "total_visits_projected": 6675,
+                    "exposed_visits": 548
+                },
+                "publisher:cartpkxxdp": {
+                    "impressions": 1146,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpkxxdn": {
+                    "impressions": 1120,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 58,
+                    "exposed_visits": 4
+                },
+                "publisher:cartpkxxdm": {
+                    "impressions": 492,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 34,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpkxxdk": {
+                    "impressions": 1244,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpkxxdj": {
+                    "impressions": 2120,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 60,
+                    "exposed_visits": 4
+                },
+                "publisher:lwncontent": {
+                    "impressions": 20462,
+                    "post_exposure_visits": 24,
+                    "total_visits_projected": 360,
+                    "exposed_visits": 49
+                },
+                "publisher:nonmoverhomeownerinmarketpktv2m": {
+                    "impressions": 966,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 91,
+                    "exposed_visits": 7
+                },
+                "publisher:parentxmaspktslr": {
+                    "impressions": 1492,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 49,
+                    "exposed_visits": 3
+                },
+                "publisher:diyerspktx66": {
+                    "impressions": 3054,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 53,
+                    "exposed_visits": 3
+                },
+                "site:mis": {
+                    "impressions": 275008,
+                    "post_exposure_visits": 73,
+                    "total_visits_projected": 1095,
+                    "exposed_visits": 139
+                },
+                "publisher:diyerspktx60": {
+                    "impressions": 2152,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 87,
+                    "exposed_visits": 6
+                },
+                "Dart Ad ID:elxvetday": {
+                    "impressions": 124014,
+                    "post_exposure_visits": 110,
+                    "total_visits_projected": 1671,
+                    "exposed_visits": 145
+                },
+                "publisher:flrcartpkv9d2": {
+                    "impressions": 208,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:flrcartpkv9d1": {
+                    "impressions": 286,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 3
+                },
+                "publisher:mlwcontentpkv9gh": {
+                    "impressions": 118,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:searsconquest": {
+                    "impressions": 496,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 3
+                },
+                "publisher:mlwcontentpkv9gd": {
+                    "impressions": 442,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:inmarketpktx68": {
+                    "impressions": 1134,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 2
+                },
+                "publisher:preferkobalt": {
+                    "impressions": 3914,
+                    "post_exposure_visits": 8,
+                    "total_visits_projected": 124,
+                    "exposed_visits": 8
+                },
+                "publisher:firsttimehomeownerspktx6l": {
+                    "impressions": 200,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpksx95": {
+                    "impressions": 806,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "Dart Ad ID:lgvetday": {
+                    "impressions": 165680,
+                    "post_exposure_visits": 104,
+                    "total_visits_projected": 1607,
+                    "exposed_visits": 141
+                },
+                "publisher:newmoversacpmppktxf3": {
+                    "impressions": 872,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 2
+                },
+                "publisher:prospktx6m": {
+                    "impressions": 1008,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:inmktapppksr46": {
+                    "impressions": 786,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:inmktapppksr42": {
+                    "impressions": 4444,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 71,
+                    "exposed_visits": 5
+                },
+                "site:app": {
+                    "impressions": 1782372,
+                    "post_exposure_visits": 505,
+                    "total_visits_projected": 7845,
+                    "exposed_visits": 813
+                },
+                "publisher:contentpkrtbl": {
+                    "impressions": 52,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "Dart Ad ID:preblksbd": {
+                    "impressions": 134264,
+                    "post_exposure_visits": 98,
+                    "total_visits_projected": 1511,
+                    "exposed_visits": 141
+                },
+                "publisher:diyersacpmppktx6f": {
+                    "impressions": 704,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 41,
+                    "exposed_visits": 3
+                },
+                "publisher:purchasepkzkc1": {
+                    "impressions": 1184,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpksr4k": {
+                    "impressions": 410,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:diyers": {
+                    "impressions": 78316,
+                    "post_exposure_visits": 143,
+                    "total_visits_projected": 2196,
+                    "exposed_visits": 171
+                },
+                "publisher:demopl0ctm": {
+                    "impressions": 1572,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 2
+                },
+                "publisher:demopl0ctn": {
+                    "impressions": 2764,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 71,
+                    "exposed_visits": 5
+                },
+                "publisher:cartpksr4f": {
+                    "impressions": 1280,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpksr4g": {
+                    "impressions": 556,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 56,
+                    "exposed_visits": 4
+                },
+                "publisher:demopl0ctp": {
+                    "impressions": 550,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 2
+                },
+                "publisher:pandorabanner11/8": {
+                    "impressions": 7548,
+                    "post_exposure_visits": 9,
+                    "total_visits_projected": 129,
+                    "exposed_visits": 11
+                },
+                "publisher:demopl0cts": {
+                    "impressions": 3562,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "publisher:premoverspktv2h": {
+                    "impressions": 48,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 22,
+                    "exposed_visits": 1
+                },
+                "publisher:tatpurchase": {
+                    "impressions": 3470,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 3
+                },
+                "publisher:cartpksx98": {
+                    "impressions": 924,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:vidq4ad2549prime15nbcpjyrqb": {
+                    "impressions": 86,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:preferelxpksx8n": {
+                    "impressions": 384,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 13,
+                    "exposed_visits": 1
+                },
+                "publisher:preferelxpksx8k": {
+                    "impressions": 122,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "iol:vf": {
+                    "impressions": 1627170,
+                    "post_exposure_visits": 387,
+                    "total_visits_projected": 6025,
+                    "exposed_visits": 600
+                },
+                "iol:vd": {
+                    "impressions": 1208,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "channel:eyeview": {
+                    "impressions": 32822,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 73,
+                    "exposed_visits": 11
+                },
+                "inv_type:online": {
+                    "impressions": 1885666,
+                    "post_exposure_visits": 330,
+                    "total_visits_projected": 5105,
+                    "exposed_visits": 489
+                },
+                "publisher:parentxmaspktw3h": {
+                    "impressions": 28866,
+                    "post_exposure_visits": 14,
+                    "total_visits_projected": 222,
+                    "exposed_visits": 22
+                },
+                "publisher:contentpksx8y": {
+                    "impressions": 1942,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 59,
+                    "exposed_visits": 4
+                },
+                "publisher:inmkt": {
+                    "impressions": 145686,
+                    "post_exposure_visits": 107,
+                    "total_visits_projected": 1657,
+                    "exposed_visits": 155
+                },
+                "publisher:inmkttools": {
+                    "impressions": 97302,
+                    "post_exposure_visits": 43,
+                    "total_visits_projected": 656,
+                    "exposed_visits": 58
+                },
+                "publisher:lwncontentpkv9f5": {
+                    "impressions": 1228,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 4
+                },
+                "publisher:lwncontentpkv9f7": {
+                    "impressions": 294,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:lwncontentpkv9f1": {
+                    "impressions": 778,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpkxvv2": {
+                    "impressions": 1276,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "publisher:flrcart": {
+                    "impressions": 8794,
+                    "post_exposure_visits": 13,
+                    "total_visits_projected": 186,
+                    "exposed_visits": 27
+                },
+                "publisher:nonmovernopurchasepktv2b": {
+                    "impressions": 3334,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 47,
+                    "exposed_visits": 6
+                },
+                "publisher:preferwhr": {
+                    "impressions": 498,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 53,
+                    "exposed_visits": 3
+                },
+                "publisher:postmoverhomeownerpktr3c": {
+                    "impressions": 5682,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 4
+                },
+                "creative:prg": {
+                    "impressions": 2147316,
+                    "post_exposure_visits": 730,
+                    "total_visits_projected": 11286,
+                    "exposed_visits": 1093
+                },
+                "placement:v": {
+                    "impressions": 163224,
+                    "post_exposure_visits": 114,
+                    "total_visits_projected": 1798,
+                    "exposed_visits": 204
+                },
+                "publisher:inmarketpktx6p": {
+                    "impressions": 1574,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 2
+                },
+                "placement:s": {
+                    "impressions": 554,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 78,
+                    "exposed_visits": 10
+                },
+                "publisher:contentpkxxdh": {
+                    "impressions": 1286,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 4
+                },
+                "placement:d": {
+                    "impressions": 2662242,
+                    "post_exposure_visits": 716,
+                    "total_visits_projected": 11044,
+                    "exposed_visits": 1040
+                },
+                "publisher:contentpkxxdg": {
+                    "impressions": 1324,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 75,
+                    "exposed_visits": 5
+                },
+                "publisher:parentxmaspktw3g": {
+                    "impressions": 17444,
+                    "post_exposure_visits": 9,
+                    "total_visits_projected": 141,
+                    "exposed_visits": 13
+                },
+                "publisher:contentpkxxdc": {
+                    "impressions": 1384,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 4
+                },
+                "publisher:contentpkxxdb": {
+                    "impressions": 2112,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:inmktapppksjsf": {
+                    "impressions": 192,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 1
+                },
+                "publisher:inmktapppksjsb": {
+                    "impressions": 4622,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 41,
+                    "exposed_visits": 4
+                },
+                "publisher:searsconquestpktv2q": {
+                    "impressions": 1524,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 4
+                },
+                "brand:lowes": {
+                    "impressions": 2826066,
+                    "post_exposure_visits": 811,
+                    "total_visits_projected": 12527,
+                    "exposed_visits": 1224
+                },
+                "creative:upf": {
+                    "impressions": 1208,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "Dart Ad ID:whrappinnv2": {
+                    "impressions": 660412,
+                    "post_exposure_visits": 300,
+                    "total_visits_projected": 4696,
+                    "exposed_visits": 460
+                },
+                "publisher:postmoverhomeownerpktr35": {
+                    "impressions": 5626,
+                    "post_exposure_visits": 7,
+                    "total_visits_projected": 100,
+                    "exposed_visits": 7
+                },
+                "audience:3p": {
+                    "impressions": 1786158,
+                    "post_exposure_visits": 649,
+                    "total_visits_projected": 10073,
+                    "exposed_visits": 939
+                },
+                "publisher:postmoverhomeownerpktr36": {
+                    "impressions": 5480,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 36,
+                    "exposed_visits": 3
+                },
+                "publisher:postmoverhomeownerpktr39": {
+                    "impressions": 674,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:inmarketpktx6n": {
+                    "impressions": 640,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 13,
+                    "exposed_visits": 1
+                },
+                "publisher:homedepotconquest": {
+                    "impressions": 552,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "Dart Ad ID:netmining": {
+                    "impressions": 257222,
+                    "post_exposure_visits": 56,
+                    "total_visits_projected": 844,
+                    "exposed_visits": 114
+                },
+                "publisher:lwncart": {
+                    "impressions": 18076,
+                    "post_exposure_visits": 18,
+                    "total_visits_projected": 269,
+                    "exposed_visits": 33
+                },
+                "publisher:purchasepksr4m": {
+                    "impressions": 872,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepkthtd": {
+                    "impressions": 1134,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 5
+                },
+                "publisher:womenholidaypktw41": {
+                    "impressions": 652,
+                    "post_exposure_visits": 8,
+                    "total_visits_projected": 126,
+                    "exposed_visits": 10
+                },
+                "publisher:womenholidaypktw43": {
+                    "impressions": 5016,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 61,
+                    "exposed_visits": 8
+                },
+                "publisher:purchasepkthtc": {
+                    "impressions": 1152,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepksr4r": {
+                    "impressions": 456,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:prospktx5w": {
+                    "impressions": 282,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:rpecontentpkv9k9": {
+                    "impressions": 194,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:inmkttoolspkvcyj": {
+                    "impressions": 4392,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 49,
+                    "exposed_visits": 4
+                },
+                "publisher:opecartpkv9h9": {
+                    "impressions": 634,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:parentxmas": {
+                    "impressions": 6350,
+                    "post_exposure_visits": 9,
+                    "total_visits_projected": 147,
+                    "exposed_visits": 12
+                },
+                "publisher:purchasepl0cvr": {
+                    "impressions": 2016,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:giftgiverspktxdm": {
+                    "impressions": 450,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:giftgiverspktxdj": {
+                    "impressions": 1702,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 35,
+                    "exposed_visits": 2
+                },
+                "publisher:purchasepktht7": {
+                    "impressions": 2014,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "publisher:opecartpkv9hf": {
+                    "impressions": 452,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "publisher:homedepotconquestpktv2t": {
+                    "impressions": 884,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 13,
+                    "exposed_visits": 1
+                },
+                "publisher:inmkttoolspkrtb9": {
+                    "impressions": 370,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:inmkttoolspkrtb8": {
+                    "impressions": 2064,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:contentpl0cvb": {
+                    "impressions": 1562,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:holidaycontent": {
+                    "impressions": 11652,
+                    "post_exposure_visits": 17,
+                    "total_visits_projected": 253,
+                    "exposed_visits": 28
+                },
+                "publisher:diyerspktxff": {
+                    "impressions": 2504,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 46,
+                    "exposed_visits": 3
+                },
+                "publisher:diyerspktxfd": {
+                    "impressions": 1576,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:premoverpktr34": {
+                    "impressions": 1454,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepksjsw": {
+                    "impressions": 936,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepksjsz": {
+                    "impressions": 426,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepksjsx": {
+                    "impressions": 642,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:diyerspktxfj": {
+                    "impressions": 2928,
+                    "post_exposure_visits": 9,
+                    "total_visits_projected": 145,
+                    "exposed_visits": 10
+                },
+                "publisher:diyerspktxfh": {
+                    "impressions": 92,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:lwncartpkv9fd": {
+                    "impressions": 814,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 33,
+                    "exposed_visits": 6
+                },
+                "publisher:flrcontent": {
+                    "impressions": 11996,
+                    "post_exposure_visits": 18,
+                    "total_visits_projected": 270,
+                    "exposed_visits": 27
+                },
+                "publisher:purchasepkzkby": {
+                    "impressions": 422,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepkzkbx": {
+                    "impressions": 668,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "channel:nbc": {
+                    "impressions": 140,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:fixcontentpkv9c0": {
+                    "impressions": 600,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:inmarketpktslm": {
+                    "impressions": 990,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 63,
+                    "exposed_visits": 4
+                },
+                "publisher:purchasepkzkbw": {
+                    "impressions": 660,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 58,
+                    "exposed_visits": 4
+                },
+                "publisher:fixcontentpkv9c4": {
+                    "impressions": 472,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 2
+                },
+                "publisher:rpecartpkv9kb": {
+                    "impressions": 480,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "publisher:contentpkthsy": {
+                    "impressions": 692,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 34,
+                    "exposed_visits": 2
+                },
+                "publisher:opecart": {
+                    "impressions": 11852,
+                    "post_exposure_visits": 13,
+                    "total_visits_projected": 198,
+                    "exposed_visits": 24
+                },
+                "publisher:contentpkthsv": {
+                    "impressions": 2204,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpkthsw": {
+                    "impressions": 1152,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 42,
+                    "exposed_visits": 3
+                },
+                "publisher:contentpl0cv7": {
+                    "impressions": 1578,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:contentpl0cv6": {
+                    "impressions": 3192,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 93,
+                    "exposed_visits": 7
+                },
+                "publisher:pro": {
+                    "impressions": 15502,
+                    "post_exposure_visits": 21,
+                    "total_visits_projected": 324,
+                    "exposed_visits": 25
+                },
+                "publisher:tahcontent": {
+                    "impressions": 9934,
+                    "post_exposure_visits": 23,
+                    "total_visits_projected": 345,
+                    "exposed_visits": 37
+                },
+                "publisher:inmkttoolspkrtbb": {
+                    "impressions": 4110,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 49,
+                    "exposed_visits": 3
+                },
+                "publisher:womenholidaypktw40": {
+                    "impressions": 2624,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 44,
+                    "exposed_visits": 5
+                },
+                "publisher:newmoverspktxdy": {
+                    "impressions": 1580,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 27,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpksjsq": {
+                    "impressions": 568,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "iol:rt": {
+                    "impressions": 257222,
+                    "post_exposure_visits": 56,
+                    "total_visits_projected": 844,
+                    "exposed_visits": 114
+                },
+                "publisher:kitcontentpkv9dg": {
+                    "impressions": 198,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:kitcontentpkv9dc": {
+                    "impressions": 644,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:kitcontent": {
+                    "impressions": 11140,
+                    "post_exposure_visits": 17,
+                    "total_visits_projected": 251,
+                    "exposed_visits": 34
+                },
+                "publisher:giftgivers": {
+                    "impressions": 16302,
+                    "post_exposure_visits": 12,
+                    "total_visits_projected": 185,
+                    "exposed_visits": 15
+                },
+                "publisher:kitcontentpkv9dh": {
+                    "impressions": 470,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 4
+                },
+                "publisher:fixcontent": {
+                    "impressions": 11366,
+                    "post_exposure_visits": 19,
+                    "total_visits_projected": 282,
+                    "exposed_visits": 32
+                },
+                "publisher:purchasepl0cvl": {
+                    "impressions": 2924,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 2
+                },
+                "publisher:purchasepl0cvm": {
+                    "impressions": 2148,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "publisher:cartpkzkc5": {
+                    "impressions": 92,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:contentpksr4d": {
+                    "impressions": 536,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:firsttimehomeowners": {
+                    "impressions": 3818,
+                    "post_exposure_visits": 8,
+                    "total_visits_projected": 121,
+                    "exposed_visits": 9
+                },
+                "publisher:inmkttoolspkvcyh": {
+                    "impressions": 318,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:inmktapppksx8r": {
+                    "impressions": 1004,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 46,
+                    "exposed_visits": 5
+                },
+                "publisher:firsttimehomeownersacpmp": {
+                    "impressions": 126,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:inmkttoolspkvcyl": {
+                    "impressions": 882,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:postmoverhomeowner": {
+                    "impressions": 98208,
+                    "post_exposure_visits": 87,
+                    "total_visits_projected": 1355,
+                    "exposed_visits": 123
+                },
+                "publisher:inmktapppksx8x": {
+                    "impressions": 1522,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepl0cvp": {
+                    "impressions": 910,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "publisher:purchasepl0cvq": {
+                    "impressions": 1970,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:content": {
+                    "impressions": 175466,
+                    "post_exposure_visits": 95,
+                    "total_visits_projected": 1463,
+                    "exposed_visits": 149
+                },
+                "publisher:inmkttoolspkvcyg": {
+                    "impressions": 2284,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 73,
+                    "exposed_visits": 5
+                },
+                "publisher:inmkttoolspkvcyf": {
+                    "impressions": 1332,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:nonmovernopurchasepktr2q": {
+                    "impressions": 938,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:homerentpl0ctt": {
+                    "impressions": 5124,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 2
+                },
+                "publisher:homerentpl0ctw": {
+                    "impressions": 1778,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "publisher:homerentpl0ctv": {
+                    "impressions": 16288,
+                    "post_exposure_visits": 12,
+                    "total_visits_projected": 177,
+                    "exposed_visits": 15
+                },
+                "publisher:homerentpl0ctx": {
+                    "impressions": 12638,
+                    "post_exposure_visits": 9,
+                    "total_visits_projected": 141,
+                    "exposed_visits": 10
+                },
+                "publisher:homerentpl0ctz": {
+                    "impressions": 9132,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 92,
+                    "exposed_visits": 13
+                },
+                "Dart Ad ID:gevetday": {
+                    "impressions": 129922,
+                    "post_exposure_visits": 101,
+                    "total_visits_projected": 1548,
+                    "exposed_visits": 135
+                },
+                "publisher:diyersacpmp": {
+                    "impressions": 4960,
+                    "post_exposure_visits": 7,
+                    "total_visits_projected": 106,
+                    "exposed_visits": 15
+                },
+                "Dart Ad ID:gmpromo": {
+                    "impressions": 15978,
+                    "post_exposure_visits": 10,
+                    "total_visits_projected": 143,
+                    "exposed_visits": 13
+                },
+                "publisher:contentpksr48": {
+                    "impressions": 488,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:contentpksr49": {
+                    "impressions": 176,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "inv_type:mweb": {
+                    "impressions": 495806,
+                    "post_exposure_visits": 171,
+                    "total_visits_projected": 2643,
+                    "exposed_visits": 320
+                },
+                "publisher:opecontentpkv9h6": {
+                    "impressions": 374,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 2
+                },
+                "publisher:opecontentpkv9h8": {
+                    "impressions": 290,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "channel:googledbm": {
+                    "impressions": 1857272,
+                    "post_exposure_visits": 688,
+                    "total_visits_projected": 10654,
+                    "exposed_visits": 1000
+                },
+                "publisher:contentpksr47": {
+                    "impressions": 1324,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 32,
+                    "exposed_visits": 2
+                },
+                "publisher:fixcartpkv9c8": {
+                    "impressions": 204,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:holidaycontentpkv9hw": {
+                    "impressions": 530,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 3
+                },
+                "publisher:rpecontent": {
+                    "impressions": 10500,
+                    "post_exposure_visits": 19,
+                    "total_visits_projected": 279,
+                    "exposed_visits": 30
+                },
+                "publisher:inmktapppkxxd8": {
+                    "impressions": 336,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "publisher:inmktapppkxxd5": {
+                    "impressions": 4872,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 71,
+                    "exposed_visits": 5
+                },
+                "publisher:inmktapppkxxd4": {
+                    "impressions": 1874,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:lbmcartpkv9g2": {
+                    "impressions": 426,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 2
+                },
+                "publisher:preferkobaltpkrtb6": {
+                    "impressions": 58,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:preferkobaltpkrtb4": {
+                    "impressions": 610,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:fixcartpkv9cc": {
+                    "impressions": 392,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 33,
+                    "exposed_visits": 4
+                },
+                "publisher:fixcartpkv9cb": {
+                    "impressions": 222,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:fixcart": {
+                    "impressions": 10948,
+                    "post_exposure_visits": 14,
+                    "total_visits_projected": 210,
+                    "exposed_visits": 28
+                },
+                "publisher:purchasepkxxdq": {
+                    "impressions": 2116,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 46,
+                    "exposed_visits": 3
+                },
+                "publisher:purchasepkxxdr": {
+                    "impressions": 1160,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 29,
+                    "exposed_visits": 2
+                },
+                "publisher:purchasepkxxdv": {
+                    "impressions": 1138,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:purchasepkxxdw": {
+                    "impressions": 988,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:purchase": {
+                    "impressions": 174262,
+                    "post_exposure_visits": 104,
+                    "total_visits_projected": 1585,
+                    "exposed_visits": 160
+                },
+                "inv_type:audio": {
+                    "impressions": 1284,
+                    "post_exposure_visits": 7,
+                    "total_visits_projected": 108,
+                    "exposed_visits": 12
+                },
+                "publisher:cartpktht2": {
+                    "impressions": 1116,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 16,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpktht1": {
+                    "impressions": 2098,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 45,
+                    "exposed_visits": 3
+                },
+                "publisher:cartpktht6": {
+                    "impressions": 1098,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:cartpktht5": {
+                    "impressions": 1200,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 17,
+                    "exposed_visits": 1
+                },
+                "publisher:demopl0ctq": {
+                    "impressions": 2270,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 3
+                },
+                "publisher:premoverspktv24": {
+                    "impressions": 96,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 2
+                },
+                "publisher:inmktapp": {
+                    "impressions": 217954,
+                    "post_exposure_visits": 72,
+                    "total_visits_projected": 1105,
+                    "exposed_visits": 103
+                },
+                "channel:facebook": {
+                    "impressions": 554,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 78,
+                    "exposed_visits": 10
+                },
+                "site:sol": {
+                    "impressions": 287166,
+                    "post_exposure_visits": 147,
+                    "total_visits_projected": 2298,
+                    "exposed_visits": 215
+                },
+                "publisher:newmoversacpmp": {
+                    "impressions": 4578,
+                    "post_exposure_visits": 14,
+                    "total_visits_projected": 217,
+                    "exposed_visits": 20
+                },
+                "publisher:premoverspktv2v": {
+                    "impressions": 3302,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 3
+                },
+                "publisher:purchasepksx9b": {
+                    "impressions": 1868,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:purchasepksx9c": {
+                    "impressions": 1020,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 28,
+                    "exposed_visits": 2
+                },
+                "publisher:premoverspktv2j": {
+                    "impressions": 17734,
+                    "post_exposure_visits": 17,
+                    "total_visits_projected": 273,
+                    "exposed_visits": 32
+                },
+                "publisher:purchasepksx9g": {
+                    "impressions": 718,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 57,
+                    "exposed_visits": 4
+                },
+                "publisher:purchasepksx9h": {
+                    "impressions": 836,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 1
+                },
+                "publisher:premoverspktv2g": {
+                    "impressions": 800,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:preferlgpksr3v": {
+                    "impressions": 700,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:preferlgpksr3w": {
+                    "impressions": 1784,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 45,
+                    "exposed_visits": 3
+                },
+                "publisher:parentxmaspktw3j": {
+                    "impressions": 4888,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 73,
+                    "exposed_visits": 6
+                },
+                "publisher:parentxmaspktw3k": {
+                    "impressions": 2412,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 56,
+                    "exposed_visits": 5
+                },
+                "publisher:parentxmaspktw3m": {
+                    "impressions": 998,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 91,
+                    "exposed_visits": 7
+                },
+                "publisher:parentxmaspktw3n": {
+                    "impressions": 8416,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 91,
+                    "exposed_visits": 15
+                },
+                "publisher:rpecontentpkv9k7": {
+                    "impressions": 472,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 2
+                },
+                "publisher:preferlgpksr3y": {
+                    "impressions": 3958,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 27,
+                    "exposed_visits": 2
+                },
+                "audience:go": {
+                    "impressions": 1330,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 3
+                },
+                "publisher:nonmovernopurchase": {
+                    "impressions": 11788,
+                    "post_exposure_visits": 6,
+                    "total_visits_projected": 84,
+                    "exposed_visits": 10
+                },
+                "publisher:mlwcart": {
+                    "impressions": 5444,
+                    "post_exposure_visits": 7,
+                    "total_visits_projected": 98,
+                    "exposed_visits": 12
+                },
+                "Dart Ad ID:samsungvet": {
+                    "impressions": 157372,
+                    "post_exposure_visits": 110,
+                    "total_visits_projected": 1682,
+                    "exposed_visits": 163
+                },
+                "publisher:moverpktsly": {
+                    "impressions": 782,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 28,
+                    "exposed_visits": 2
+                },
+                "publisher:rpecart": {
+                    "impressions": 9886,
+                    "post_exposure_visits": 15,
+                    "total_visits_projected": 223,
+                    "exposed_visits": 30
+                },
+                "publisher:premoverpktr2y": {
+                    "impressions": 3110,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                },
+                "publisher:pandorabanner11/8pl1wxv": {
+                    "impressions": 2426,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 2
+                },
+                "publisher:postmovershomeownerspktv2y": {
+                    "impressions": 2564,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 14,
+                    "exposed_visits": 2
+                },
+                "publisher:postmovershomeownerspktv2z": {
+                    "impressions": 8,
+                    "post_exposure_visits": 0,
+                    "total_visits_projected": 0,
+                    "exposed_visits": 1
+                },
+                "publisher:postmovershomeownerspktv2d": {
+                    "impressions": 108,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 22,
+                    "exposed_visits": 1
+                },
+                "publisher:cartpkzkc6": {
+                    "impressions": 628,
+                    "post_exposure_visits": 5,
+                    "total_visits_projected": 72,
+                    "exposed_visits": 5
+                },
+                "publisher:postmovershomeownerspktv2f": {
+                    "impressions": 82494,
+                    "post_exposure_visits": 81,
+                    "total_visits_projected": 1280,
+                    "exposed_visits": 154
+                },
+                "publisher:cartpkzkc3": {
+                    "impressions": 1140,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "publisher:prefer": {
+                    "impressions": 11916,
+                    "post_exposure_visits": 4,
+                    "total_visits_projected": 65,
+                    "exposed_visits": 10
+                },
+                "publisher:moverpktw3r": {
+                    "impressions": 4106,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 33,
+                    "exposed_visits": 3
+                },
+                "publisher:propktxf9": {
+                    "impressions": 1088,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 49,
+                    "exposed_visits": 4
+                },
+                "publisher:cart": {
+                    "impressions": 187982,
+                    "post_exposure_visits": 96,
+                    "total_visits_projected": 1460,
+                    "exposed_visits": 150
+                },
+                "publisher:kitcartpkv9dr": {
+                    "impressions": 192,
+                    "post_exposure_visits": 3,
+                    "total_visits_projected": 43,
+                    "exposed_visits": 3
+                },
+                "publisher:kitcartpkv9dq": {
+                    "impressions": 464,
+                    "post_exposure_visits": 1,
+                    "total_visits_projected": 15,
+                    "exposed_visits": 1
+                },
+                "publisher:propktxf5": {
+                    "impressions": 646,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 30,
+                    "exposed_visits": 2
+                },
+                "publisher:holidaycartpkv9hz": {
+                    "impressions": 498,
+                    "post_exposure_visits": 2,
+                    "total_visits_projected": 31,
+                    "exposed_visits": 2
+                }
+            }
+        }
+    }
+}
