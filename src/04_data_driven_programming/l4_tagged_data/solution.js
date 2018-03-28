@@ -1,9 +1,9 @@
 import { cons, car, cdr, toString as pairToString } from 'hexlet-pairs'; // eslint-disable-line
 import { cons as consList, l, random, head, reverse, toString as listToString,
 length, get } from 'hexlet-pairs-data'; // eslint-disable-line
-import { getName as getSimpleCardName, damage as simpleCardDamage, make as makeSimpleCard } from './l4_simpleCard'; // eslint-disable-line
-import { getName as getPercentCardName, damage as percentCardDamage, make as makePercentCard } from './l4_percentCard'; // eslint-disable-line
-import { typeTag } from './l4_type'; // eslint-disable-line
+import { getName as getSimpleCardName, damage as simpleCardDamage, make as makeSimpleCard } from './simpleCard'; // eslint-disable-line
+import { getName as getPercentCardName, damage as percentCardDamage, make as makePercentCard } from './percentCard'; // eslint-disable-line
+import { typeTag } from './type'; // eslint-disable-line
 
 /*  >>>>>  EX  <<<<<
         1) simpleCard.js
