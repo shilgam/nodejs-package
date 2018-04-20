@@ -120,7 +120,7 @@ describe('AlarmClock', () => {
     const clock = new AlarmClock();
     clock.longClickMode();
 
-    for (let i = 0; i < 18 * 60; i++) {
+    for (let i = 0; i < 18 * 60; i += 1) {
       clock.tick();
     }
     expect(clock.isAlarmTime()).toBeTruthy();

@@ -4,27 +4,19 @@ import State from './State';
 
 
 export default class BellState extends State {
-  constructor(clock) {
-    super('bell');
-    this.clock = clock;
-  }
+  mode = 'bell';
+  NextStateClass = ClockState;
 
-  clickH() {
+  incrementH() {
     return false;
   }
 
-  clickM() {
+  incrementM() {
     return false;
   }
 
   tick() {
-    console.log('tick in BellState');
-    this.clock.moveClockHands();
-    this.clock.setState(ClockState);
-  }
-
-  clickMode() {
-    this.clock.setState(ClockState);
+    this.nextState();
   }
 }
 // END

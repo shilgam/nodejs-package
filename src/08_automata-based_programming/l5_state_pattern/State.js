@@ -1,15 +1,15 @@
 // BEGIN (write your solution here)
 export default class State {
-  constructor(state) {
-    this.state = state;
+  constructor(clock) {
+    this.clock = clock;
   }
 
-  getState() {
-    return this.state;
+  nextState(StateKlass) {
+    this.clock.setState(StateKlass || this.NextStateClass);
   }
 
-  setState(Klass) {
-    this.state = new Klass(this);
+  getModeName() {
+    return this.mode;
   }
 }
 // END
