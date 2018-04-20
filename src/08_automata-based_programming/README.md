@@ -24,11 +24,11 @@ About:
  Легкий-тяжелый" - субъективная оценка.
 
  ```
- Simple           | Complex       
-------------------|---------------
- Constant         | Variable      
- Data             | Object (Hard)
- Recursion (Hard) | Loop          
+Simple           | Complex       
+-----------------|---------------
+Constant         | Variable      
+Data             | Object (Hard)
+Recursion (Hard) | Loop          
  ```
 
 __2 типа сложности:__
