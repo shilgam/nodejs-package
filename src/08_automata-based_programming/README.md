@@ -24,11 +24,11 @@ About:
  Легкий-тяжелый" - субъективная оценка.
 
  ```
- Simple           | Complex       
-------------------|---------------
- Constant         | Variable      
- Data             | Object (Hard)
- Recursion (Hard) | Loop          
+Simple           | Complex       
+-----------------|---------------
+Constant         | Variable      
+Data             | Object (Hard)
+Recursion (Hard) | Loop          
  ```
 
 __2 типа сложности:__
@@ -93,6 +93,7 @@ export default (str) => {
 };
 ```
 
-## Lesson 6: Паттерн State Machine
-
+## Lesson 5: Паттерн state
 Смотри в README c заданием
+
+## Lesson 6: Паттерн State Machine
