@@ -94,5 +94,6 @@ export default (str) => {
 ```
 
 ## Lesson 5: Паттерн state
-
 Смотри в README c заданием
+
+## Lesson 6: Паттерн State Machine
