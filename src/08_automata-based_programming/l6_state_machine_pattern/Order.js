@@ -17,17 +17,15 @@ StateMachine.factory(Order, {
     { name: 'accept', from: 'init', to: 'pending' },
     { name: 'ship', from: 'pending', to: 'shipped' },
     { name: 'complete', from: 'shipped', to: 'completed' },
-    { name: 'cancel', from: 'init', to: 'canceled' },
-    { name: 'cancel', from: 'pending', to: 'canceled' },
-    { name: 'refund', from: 'shipped', to: 'refunded' },
-    { name: 'refund', from: 'completed', to: 'refunded' },
+    { name: 'cancel', from: ['init', 'pending'], to: 'canceled' },
+    { name: 'refund', from: ['shipped', 'completed'], to: 'refunded' },
     // END
   ],
   methods: {
     // BEGIN (write your solution here)
-    onEnterState() {
-      if (!this._fsm.is('init')) {  // eslint-disable-line
-        this.history.push({ state: this._fsm.state, createdAt: new Date() }); // eslint-disable-line
+    onEnterState({ from, to }) {
+      if (from !== 'none') {
+        this.history.push({ state: to, createdAt: new Date() });
       }
     },
     // END
