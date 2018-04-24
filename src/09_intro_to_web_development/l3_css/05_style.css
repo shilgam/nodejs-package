@@ -1,0 +1,8 @@
+ body {
+   /* color: red; */
+ }
+ .note {
+   color: grey;
+   background-color: yellow;
+   font-weight: bold;
+ }
