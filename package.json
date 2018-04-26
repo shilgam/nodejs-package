@@ -28,6 +28,7 @@
   "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "cheerio": "^1.0.0-rc.2",
     "errno": "^0.1.6",
     "fs": "0.0.1-security",
     "gulp": "*",
