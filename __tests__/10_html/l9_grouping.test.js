@@ -4,6 +4,7 @@ import cheerio from 'cheerio';
 const userFile = fs.readFileSync('././src/10_html/l9_grouping/index.html');
 const userStyle = fs.readFileSync('././src/10_html/l9_grouping/style.css');
 
+
 const $ = cheerio.load(userFile);
 document.documentElement.innerHTML = userFile;
 
@@ -39,7 +40,8 @@ test('#header must include <h1>, <h3> and <p>', () => {
 test('#header must include <p> with 2 links', () => {
   expect($('#header').children('p').children().length).toEqual(2);
   expect($('#header').children('p').children('a').text()).not.toBe('');
-  expect($('#header').children('p').children('a').next().text()).not.toBe('');
+  expect($('#header').children('p').children('a').next()
+    .text()).not.toBe('');
 });
 
 test('#header margin bottom must be 32px', () => {
