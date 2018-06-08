@@ -20,7 +20,7 @@ check-types:
 	npm run flow
 
 lint:
-	npm run eslint .
+	npm run eslint __tests__/08_automata-based_programming/
 
 publish:
 	npm publish
